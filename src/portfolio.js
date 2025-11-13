@@ -24,7 +24,7 @@ const greeting = {
     "Computer Science Engineering student at CY Tech (France). Passionate about AI, automation, web development, and cybersecurity. Always learning, always building."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1I5Tn7fLnfxZZ9UDH_psjHHwTpyirB9vI/view?usp=sharing",
+    "https://drive.google.com/file/d/1BBtKhAiu9eu3ijApj2Aqa0YHQUj6-_6t/view?usp=sharing",
   portfolio_repository: "https://github.com/khayem487",
   githubProfile: "https://github.com/khayem487",
   displayGreeting: true
@@ -267,7 +267,7 @@ const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume or reach out directly.",
   downloadLink:
-    "https://drive.google.com/file/d/1I5Tn7fLnfxZZ9UDH_psjHHwTpyirB9vI/view?usp=sharing",
+    "https://drive.google.com/file/d/1BBtKhAiu9eu3ijApj2Aqa0YHQUj6-_6t/view?usp=sharing",
   display: true
 };
 
