@@ -9,7 +9,7 @@ export default function StartupProject() {
     if (!url) {
       return;
     }
-    var win = window.open(url, "_blank");
+    const win = window.open(url, "_blank");
     win.focus();
   }
 
@@ -17,18 +17,13 @@ export default function StartupProject() {
   if (!bigProjects.display) {
     return null;
   }
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="projects">
         <div>
           <h1 className="skills-heading">{bigProjects.title}</h1>
-          <p
-            className={
-              isDark
-                ? "dark-mode project-subtitle"
-                : "subTitle project-subtitle"
-            }
-          >
+          <p className={isDark ? "dark-mode project-subtitle" : "subTitle project-subtitle"}>
             {bigProjects.subtitle}
           </p>
 
@@ -45,35 +40,36 @@ export default function StartupProject() {
                 >
                   {project.image ? (
                     <div className="project-image">
-                      <img
-                        src={project.image}
-                        alt={project.projectName}
-                        className="card-image"
-                      ></img>
+                      <img src={project.image} alt={project.projectName} className="card-image"></img>
                     </div>
                   ) : null}
+
                   <div className="project-detail">
-                    <h5
-                      className={isDark ? "dark-mode card-title" : "card-title"}
-                    >
+                    <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
                       {project.projectName}
                     </h5>
-                    <p
-                      className={
-                        isDark ? "dark-mode card-subtitle" : "card-subtitle"
-                      }
-                    >
+
+                    <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
                       {project.projectDesc}
                     </p>
+
+                    {!!project.impactPoints?.length && (
+                      <ul className="project-impact-list">
+                        {project.impactPoints.map((point, idx) => (
+                          <li key={idx} className="project-impact-item">
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
                     {project.footerLink ? (
                       <div className="project-card-footer">
-                        {project.footerLink.map((link, i) => {
+                        {project.footerLink.map((link, linkIdx) => {
                           return (
                             <span
-                              key={i}
-                              className={
-                                isDark ? "dark-mode project-tag" : "project-tag"
-                              }
+                              key={linkIdx}
+                              className={isDark ? "dark-mode project-tag" : "project-tag"}
                               onClick={() => openUrlInNewTab(link.url)}
                             >
                               {link.name}

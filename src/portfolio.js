@@ -17,10 +17,26 @@ const illustration = {
 
 const greeting = {
   username: "Khayem Ben Ghorbel",
-  title: "Hey, I'm Khayem Ben Ghorbel 👋",
-  subTitle: emoji(
+  title: "Hey, I'm Khayem Ben Ghorbel",
+  titleFr: "Salut, je suis Khayem Ben Ghorbel",
+  subTitleEn: emoji(
     "Computer Science Engineering student at CY Tech (France), focused on AI, automation, and full-stack development. Currently looking for a 24-month alternance starting September 2026."
   ),
+  subTitleFr: emoji(
+    "Étudiant ingénieur en informatique à CY Tech (France), spécialisé en IA, automatisation et développement full-stack. Je recherche une alternance de 24 mois à partir de septembre 2026."
+  ),
+  recruiterQuickFacts: {
+    en: [
+      "Target roles: AI / Data / Full-stack alternance",
+      "Availability: September 2026 · Duration: 24 months",
+      "Mobility: France · Base: Cergy"
+    ],
+    fr: [
+      "Postes ciblés : alternance IA / Data / Full-stack",
+      "Disponibilité : septembre 2026 · Durée : 24 mois",
+      "Mobilité : France · Basé à Cergy"
+    ]
+  },
   resumeLink:
     "https://drive.google.com/file/d/1BBtKhAiu9eu3ijApj2Aqa0YHQUj6-_6t/view?usp=sharing",
   portfolio_repository: "https://github.com/khayem487/portfolio",
@@ -115,13 +131,19 @@ const openSource = {
 // Projects section
 const bigProjects = {
   title: "Featured Projects",
-  subtitle: "Concrete builds in AI, automation, and software engineering.",
+  subtitle:
+    "Concrete builds in AI, automation, and software engineering with clear outcomes.",
   projects: [
     {
       image: require("./assets/images/nextuLogo.webp"),
       projectName: "CROUS Notifier Me",
       projectDesc:
         "Python automation tool that monitors CROUS updates and sends notifications to speed up decision making.",
+      impactPoints: [
+        "Automates repetitive checks and notifies as soon as updates are detected",
+        "Built with a lightweight Python workflow for reliability",
+        "Practical tool created from a real student need"
+      ],
       footerLink: [
         {
           name: "View Code",
@@ -134,6 +156,11 @@ const bigProjects = {
       projectName: "Facial Recognition Attendance",
       projectDesc:
         "Internship project: real-time attendance tracking with OpenCV and Python for operational use.",
+      impactPoints: [
+        "Real-time face detection and attendance logging",
+        "Developed during internship at Kernel Solutions & Innovation",
+        "Transforms a manual attendance step into a software workflow"
+      ],
       footerLink: [
         {
           name: "View Code",
@@ -146,6 +173,11 @@ const bigProjects = {
       projectName: "ASL Recognition (Hackathon - 2nd Place)",
       projectDesc:
         "TensorFlow + OpenCV model that recognizes American Sign Language gestures in real time.",
+      impactPoints: [
+        "Awarded 2nd place in an IEEE Computer Society hackathon",
+        "Real-time recognition pipeline with computer vision",
+        "Focused on accessibility-oriented AI use cases"
+      ],
       footerLink: [
         {
           name: "View Code",
@@ -158,6 +190,11 @@ const bigProjects = {
       projectName: "Car Rental Client Application",
       projectDesc:
         "Full-stack platform with Spring Boot and Oracle Database for vehicle booking and client management.",
+      impactPoints: [
+        "End-to-end web architecture (backend + database + client flow)",
+        "Spring Boot + Java + Oracle stack",
+        "Covers booking and customer management use cases"
+      ],
       footerLink: [
         {
           name: "View Code",

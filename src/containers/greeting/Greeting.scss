@@ -3,22 +3,15 @@
 .main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 4rem;
 }
+
 .greet-main {
-  width: 90%;
+  width: 92%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 2rem;
-}
-
-.greeting-main {
-  display: flex;
-}
-
-.subTitle {
-  color: $subTitle !important;
 }
 
 .greeting-main {
@@ -30,27 +23,88 @@
   margin-bottom: 30px;
 }
 
-.empty-div {
-  margin-bottom: 40px;
+.subTitle {
+  color: $subTitle !important;
 }
 
-.button-greeting-div {
-  display: flex;
-  margin-top: 40px;
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid $lightBorder1;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
-.download-link-button {
-  text-decoration: none;
+
+.lang-switch-btn {
+  background: transparent;
+  color: $subTitle;
+  border: none;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lang-switch-btn.active {
+  background: $buttonColor;
+  color: $lightBackground1;
 }
 
 .greeting-text {
-  font-size: 70px;
+  font-size: 56px;
   line-height: 1.1;
   color: $textColor !important;
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 820px;
+  margin-bottom: 0.75rem;
+}
+
+.recruiter-card {
+  margin: 1rem 0 0.5rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid $lightBorder1;
+  border-radius: 12px;
+  background: $lightBackground2;
+  max-width: 760px;
+}
+
+.recruiter-card-title {
+  margin: 0 0 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $buttonColor;
+}
+
+.recruiter-facts-list {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.recruiter-fact-item {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.empty-div {
+  margin-bottom: 20px;
+}
+
+.button-greeting-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 24px;
+}
+
+.download-link-button {
+  text-decoration: none;
 }
 
 .greeting-image-div > img {
@@ -93,28 +147,45 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 46px;
   }
+
   .greeting-text-p {
     font-size: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
   }
+
+  .lang-switch {
+    display: flex;
+    margin: 0 auto 1rem;
+    width: max-content;
+  }
+
   .greeting-text {
     font-size: 30px;
     text-align: center;
   }
+
   .greeting-text-p {
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.5;
     text-align: center;
   }
+
+  .recruiter-card {
+    margin: 1rem auto 0.6rem;
+    text-align: left;
+  }
+
   .greeting-main {
     display: block;
   }
+
   .greeting-image-div {
     height: 256px;
   }
