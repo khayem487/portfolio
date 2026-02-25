@@ -1,0 +1,19 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="900" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="504" rx="28" fill="url(#bg)"/>
+  <rect x="58" y="60" width="844" height="420" rx="22" fill="rgba(255,255,255,0.07)"/>
+
+  <circle cx="198" cy="192" r="78" fill="rgba(255,255,255,0.18)"/>
+  <path d="M198 145C173 145 153 165 153 190V218L136 235V248H260V235L243 218V190C243 165 223 145 198 145Z" fill="#EEF2FF"/>
+  <circle cx="198" cy="265" r="16" fill="#EEF2FF"/>
+
+  <text x="312" y="196" fill="#F8FAFC" font-size="58" font-family="Arial, sans-serif" font-weight="700">CROUS Notifier Me</text>
+  <text x="312" y="250" fill="#DBEAFE" font-size="29" font-family="Arial, sans-serif">Automatisation Python · Alertes temps réel</text>
+  <text x="312" y="300" fill="#DBEAFE" font-size="24" font-family="Arial, sans-serif">Monitoring d'annonces + notifications instantanées</text>
+</svg>

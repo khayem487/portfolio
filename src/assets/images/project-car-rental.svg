@@ -1,0 +1,22 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="80" y1="40" x2="900" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="504" rx="28" fill="url(#bg4)"/>
+  <rect x="58" y="60" width="844" height="420" rx="22" fill="rgba(255,255,255,0.08)"/>
+
+  <rect x="118" y="185" width="180" height="86" rx="18" fill="#ECFEFF"/>
+  <path d="M145 185L180 151H240L270 185" stroke="#0F766E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="162" cy="278" r="23" fill="#0F766E"/>
+  <circle cx="254" cy="278" r="23" fill="#0F766E"/>
+  <circle cx="162" cy="278" r="9" fill="#ECFEFF"/>
+  <circle cx="254" cy="278" r="9" fill="#ECFEFF"/>
+
+  <text x="332" y="196" fill="#F0FDFF" font-size="48" font-family="Arial, sans-serif" font-weight="700">Car Rental Client Application</text>
+  <text x="332" y="250" fill="#CCFBF1" font-size="29" font-family="Arial, sans-serif">Spring Boot + Oracle · Plateforme full-stack</text>
+  <text x="332" y="300" fill="#CCFBF1" font-size="24" font-family="Arial, sans-serif">Réservation, suivi et gestion des clients</text>
+</svg>

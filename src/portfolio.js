@@ -90,8 +90,7 @@ const greeting = {
       "Mobilité : France · Basé à Cergy"
     ]
   },
-  resumeLink:
-    "https://drive.google.com/file/d/1BBtKhAiu9eu3ijApj2Aqa0YHQUj6-_6t/view?usp=sharing",
+  resumeLink: `${process.env.PUBLIC_URL}/CV_Khayem_General_Informatique.pdf`,
   portfolio_repository: "https://github.com/khayem487/portfolio",
   githubProfile: "https://github.com/khayem487",
   displayGreeting: true
@@ -225,7 +224,7 @@ const bigProjects = {
     "Projets concrets en IA, automatisation et ingénierie logicielle avec des résultats clairs.",
   projects: [
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: require("./assets/images/project-crous.svg"),
       projectName: "CROUS Notifier Me",
       projectNameFr: "CROUS Notifier Me",
       projectDesc:
@@ -251,7 +250,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/kernelins.png"),
+      image: require("./assets/images/project-attendance.svg"),
       projectName: "Facial Recognition Attendance",
       projectNameFr: "Pointage par reconnaissance faciale",
       projectDesc:
@@ -277,7 +276,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/ieeeCS.png"),
+      image: require("./assets/images/project-asl.svg"),
       projectName: "ASL Recognition (Hackathon - 2nd Place)",
       projectNameFr: "Reconnaissance ASL (Hackathon - 2e place)",
       projectDesc:
@@ -303,7 +302,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: require("./assets/images/project-car-rental.svg"),
       projectName: "Car Rental Client Application",
       projectNameFr: "Application de gestion de location de voitures",
       projectDesc:
@@ -406,8 +405,7 @@ const podcastSection = {
 const resumeSection = {
   title: "Resume",
   subtitle: "Download my latest resume.",
-  downloadLink:
-    "https://drive.google.com/file/d/1BBtKhAiu9eu3ijApj2Aqa0YHQUj6-_6t/view?usp=sharing",
+  downloadLink: `${process.env.PUBLIC_URL}/CV_Khayem_General_Informatique.pdf`,
   display: false
 };
 
