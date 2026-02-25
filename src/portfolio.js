@@ -291,6 +291,11 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/Facial-Recognition-Attendance"
+        },
+        {
+          name: "Live Page",
+          nameFr: "Page live",
+          url: "https://khayem487.github.io/Facial-Recognition-Attendance/"
         }
       ]
     },
@@ -317,6 +322,11 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/asl-recognition"
+        },
+        {
+          name: "Live Page",
+          nameFr: "Page live",
+          url: "https://khayem487.github.io/asl-recognition/"
         }
       ]
     },
@@ -343,6 +353,11 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/car-rental-client"
+        },
+        {
+          name: "Live Page",
+          nameFr: "Page live",
+          url: "https://khayem487.github.io/car-rental-client/"
         }
       ]
     }
