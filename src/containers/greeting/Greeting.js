@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -6,35 +6,21 @@ import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, greeting, socialMediaLinks} from "../../portfolio";
+import {illustration, greeting, socialMediaLinks, uiText} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import LanguageContext from "../../contexts/LanguageContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
-  const [language, setLanguage] = useState("en");
+  const {language, setLanguage} = useContext(LanguageContext);
+  const t = uiText[language] || uiText.en;
 
-  const copy = {
-    en: {
-      title: greeting.title,
-      subtitle: greeting.subTitleEn || greeting.subTitle,
-      quickFactsTitle: "Recruiter quick facts",
-      quickFacts: greeting.recruiterQuickFacts?.en || [],
-      contact: "Contact me",
-      linkedIn: "Message on LinkedIn",
-      resume: "Download resume"
-    },
-    fr: {
-      title: greeting.titleFr || greeting.title,
-      subtitle: greeting.subTitleFr || greeting.subTitle,
-      quickFactsTitle: "Infos clés recruteur",
-      quickFacts: greeting.recruiterQuickFacts?.fr || [],
-      contact: "Me contacter",
-      linkedIn: "Me contacter sur LinkedIn",
-      resume: "Télécharger le CV"
-    }
-  };
-
-  const activeCopy = copy[language];
+  const title = language === "fr" && greeting.titleFr ? greeting.titleFr : greeting.title;
+  const subtitle = language === "fr" ? greeting.subTitleFr || greeting.subTitleEn : greeting.subTitleEn;
+  const quickFacts =
+    language === "fr"
+      ? greeting.recruiterQuickFacts?.fr || []
+      : greeting.recruiterQuickFacts?.en || [];
 
   if (!greeting.displayGreeting) {
     return null;
@@ -64,18 +50,18 @@ export default function Greeting() {
               </div>
 
               <h1 className={isDark ? "dark-mode greeting-text" : "greeting-text"}>
-                {activeCopy.title} <span className="wave-emoji">{emoji("👋")}</span>
+                {title} <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
 
               <p className={isDark ? "dark-mode greeting-text-p" : "greeting-text-p subTitle"}>
-                {activeCopy.subtitle}
+                {subtitle}
               </p>
 
-              {!!activeCopy.quickFacts.length && (
+              {!!quickFacts.length && (
                 <div className={isDark ? "dark-mode recruiter-card" : "recruiter-card"}>
-                  <p className="recruiter-card-title">{activeCopy.quickFactsTitle}</p>
+                  <p className="recruiter-card-title">{t.recruiterQuickFactsTitle}</p>
                   <ul className="recruiter-facts-list">
-                    {activeCopy.quickFacts.map((item, idx) => (
+                    {quickFacts.map((item, idx) => (
                       <li key={idx} className="recruiter-fact-item">
                         {item}
                       </li>
@@ -88,16 +74,12 @@ export default function Greeting() {
               <SocialMedia />
 
               <div className="button-greeting-div">
-                <Button text={activeCopy.contact} href="#contact" />
+                <Button text={t.actions.contactMe} href="#contact" />
                 {socialMediaLinks.linkedin && (
-                  <Button
-                    text={activeCopy.linkedIn}
-                    href={socialMediaLinks.linkedin}
-                    newTab={true}
-                  />
+                  <Button text={t.actions.linkedIn} href={socialMediaLinks.linkedin} newTab={true} />
                 )}
                 {greeting.resumeLink && (
-                  <Button text={activeCopy.resume} href={greeting.resumeLink} newTab={true} />
+                  <Button text={t.actions.downloadResume} href={greeting.resumeLink} newTab={true} />
                 )}
               </div>
             </div>

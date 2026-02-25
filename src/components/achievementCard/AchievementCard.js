@@ -1,15 +1,21 @@
 import React from "react";
 import "./AchievementCard.scss";
+import {uiText} from "../../portfolio";
 
-export default function AchievementCard({cardInfo, isDark}) {
+export default function AchievementCard({cardInfo, isDark, language = "en"}) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
       return;
     }
-    var win = window.open(url, "_blank");
+    const win = window.open(url, "_blank");
     win.focus();
   }
+
+  const t = uiText[language] || uiText.en;
+  const title = language === "fr" ? cardInfo.titleFr || cardInfo.title : cardInfo.title;
+  const description =
+    language === "fr" ? cardInfo.subtitleFr || cardInfo.subtitle : cardInfo.subtitle;
 
   return (
     <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
@@ -21,24 +27,19 @@ export default function AchievementCard({cardInfo, isDark}) {
         ></img>
       </div>
       <div className="certificate-detail-div">
-        <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
-          {cardInfo.title}
-        </h5>
-        <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
-          {cardInfo.description}
-        </p>
+        <h5 className={isDark ? "dark-mode card-title" : "card-title"}>{title}</h5>
+        <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>{description}</p>
       </div>
       <div className="certificate-card-footer">
-        {cardInfo.footer.map((v, i) => {
+        {cardInfo.footerLink?.map((v, i) => {
+          const label = language === "fr" ? v.nameFr || t.actions.project : v.name || t.actions.project;
           return (
             <span
               key={i}
-              className={
-                isDark ? "dark-mode certificate-tag" : "certificate-tag"
-              }
-              onClick={() => openUrlInNewTab(v.url, v.name)}
+              className={isDark ? "dark-mode certificate-tag" : "certificate-tag"}
+              onClick={() => openUrlInNewTab(v.url, label)}
             >
-              {v.name}
+              {label}
             </span>
           );
         })}

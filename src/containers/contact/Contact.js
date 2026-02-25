@@ -6,15 +6,22 @@ import {Fade} from "react-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
+import LanguageContext from "../../contexts/LanguageContext";
 
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
+  const {language} = useContext(LanguageContext);
+
+  const title = language === "fr" ? contactInfo.titleFr || contactInfo.title : contactInfo.title;
+  const subtitle =
+    language === "fr" ? contactInfo.subtitleFr || contactInfo.subtitle : contactInfo.subtitle;
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main contact-margin-top" id="contact">
         <div className="contact-div-main">
           <div className="contact-header">
-            <h1 className="heading contact-title">{contactInfo.title}</h1>
+            <h1 className="heading contact-title">{title}</h1>
             <p
               className={
                 isDark
@@ -22,29 +29,19 @@ export default function Contact() {
                   : "subTitle contact-subtitle"
               }
             >
-              {contactInfo.subtitle}
+              {subtitle}
             </p>
-            <div
-              className={
-                isDark ? "dark-mode contact-text-div" : "contact-text-div"
-              }
-            >
+            <div className={isDark ? "dark-mode contact-text-div" : "contact-text-div"}>
               {contactInfo.number && (
                 <>
-                  <a
-                    className="contact-detail"
-                    href={"tel:" + contactInfo.number}
-                  >
+                  <a className="contact-detail" href={"tel:" + contactInfo.number}>
                     {contactInfo.number}
                   </a>
                   <br />
                   <br />
                 </>
               )}
-              <a
-                className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
-              >
+              <a className="contact-detail-email" href={"mailto:" + contactInfo.email_address}>
                 {contactInfo.email_address}
               </a>
               <br />

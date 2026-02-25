@@ -4,11 +4,25 @@ import AchievementCard from "../../components/achievementCard/AchievementCard";
 import {achievementSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import LanguageContext from "../../contexts/LanguageContext";
+
 export default function Achievement() {
   const {isDark} = useContext(StyleContext);
+  const {language} = useContext(LanguageContext);
+
   if (!achievementSection.display) {
     return null;
   }
+
+  const title =
+    language === "fr"
+      ? achievementSection.titleFr || achievementSection.title
+      : achievementSection.title;
+  const subtitle =
+    language === "fr"
+      ? achievementSection.subtitleFr || achievementSection.subtitle
+      : achievementSection.subtitle;
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="achievements">
@@ -21,7 +35,7 @@ export default function Achievement() {
                   : "heading achievement-heading"
               }
             >
-              {achievementSection.title}
+              {title}
             </h1>
             <p
               className={
@@ -30,7 +44,7 @@ export default function Achievement() {
                   : "subTitle achievement-subtitle"
               }
             >
-              {achievementSection.subtitle}
+              {subtitle}
             </p>
           </div>
           <div className="achievement-cards-div">
@@ -39,13 +53,8 @@ export default function Achievement() {
                 <AchievementCard
                   key={i}
                   isDark={isDark}
-                  cardInfo={{
-                    title: card.title,
-                    description: card.subtitle,
-                    image: card.image,
-                    imageAlt: card.imageAlt,
-                    footer: card.footerLink
-                  }}
+                  language={language}
+                  cardInfo={card}
                 />
               );
             })}

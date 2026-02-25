@@ -3,6 +3,59 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation";
 
+const uiText = {
+  en: {
+    nav: {
+      skills: "Skills",
+      projects: "Projects",
+      achievements: "Achievements",
+      contact: "Contact"
+    },
+    section: {
+      proficiency: "Proficiency",
+      education: "Education",
+      projects: "Featured Projects",
+      achievements: "Achievements",
+      contact: "Contact Me",
+      whatIDo: "What I Do"
+    },
+    actions: {
+      contactMe: "Contact me",
+      linkedIn: "Message on LinkedIn",
+      downloadResume: "Download resume",
+      viewCode: "View Code",
+      project: "Project"
+    },
+    recruiterQuickFactsTitle: "Recruiter quick facts",
+    footerBuiltWith: "Built with React"
+  },
+  fr: {
+    nav: {
+      skills: "Compétences",
+      projects: "Projets",
+      achievements: "Réalisations",
+      contact: "Contact"
+    },
+    section: {
+      proficiency: "Niveau",
+      education: "Formation",
+      projects: "Projets phares",
+      achievements: "Réalisations",
+      contact: "Me contacter",
+      whatIDo: "Ce que je fais"
+    },
+    actions: {
+      contactMe: "Me contacter",
+      linkedIn: "Me contacter sur LinkedIn",
+      downloadResume: "Télécharger le CV",
+      viewCode: "Voir le code",
+      project: "Projet"
+    },
+    recruiterQuickFactsTitle: "Infos clés recruteur",
+    footerBuiltWith: "Construit avec React"
+  }
+};
+
 // Splash Screen
 const splashScreen = {
   enabled: false,
@@ -55,12 +108,20 @@ const socialMediaLinks = {
 // Skills Section
 const skillsSection = {
   title: "What I Do",
+  titleFr: "Ce que je fais",
   subTitle: "Build practical software with a strong data and AI focus.",
+  subTitleFr: "Créer des solutions logicielles concrètes avec une forte composante data et IA.",
   skills: [
     emoji("Develop full-stack applications with React, Java, and Spring Boot."),
     emoji("Design AI/automation workflows in Python with clean, maintainable code."),
     emoji("Work on data-driven projects from preprocessing to model integration."),
     emoji("Apply secure coding and DevOps habits to ship reliable solutions.")
+  ],
+  skillsFr: [
+    emoji("Développer des applications full-stack avec React, Java et Spring Boot."),
+    emoji("Concevoir des workflows IA/automatisation en Python avec un code maintenable."),
+    emoji("Mener des projets data de la préparation des données à l’intégration des modèles."),
+    emoji("Appliquer les bonnes pratiques de sécurité et DevOps pour livrer proprement.")
   ],
   softwareSkills: [
     {skillName: "Python", fontAwesomeClassname: "fab fa-python"},
@@ -84,9 +145,14 @@ const educationInfo = {
       subHeader: "Diplôme d'ingénieur en informatique",
       duration: "2025 – 2028",
       desc: "Engineering curriculum in software, AI, and cybersecurity.",
+      descFr: "Cursus ingénieur orienté logiciel, intelligence artificielle et cybersécurité.",
       descBullets: [
         "Hands-on team projects in application development and data engineering.",
         "Regular participation in hackathons and technical challenges."
+      ],
+      descBulletsFr: [
+        "Projets pratiques en équipe en développement applicatif et data engineering.",
+        "Participation régulière à des hackathons et challenges techniques."
       ]
     },
     {
@@ -96,8 +162,12 @@ const educationInfo = {
         "Diplôme préparatoire aux études d'ingénieur – Ingénierie informatique",
       duration: "2023 – 2025",
       desc: "Preparatory studies in mathematics, physics, algorithms, and programming.",
+      descFr: "Classes préparatoires en mathématiques, physique, algorithmique et programmation.",
       descBullets: [
         "Built strong foundations in problem solving and software fundamentals."
+      ],
+      descBulletsFr: [
+        "Consolidation de solides bases en résolution de problèmes et fondamentaux logiciels."
       ]
     }
   ]
@@ -105,12 +175,30 @@ const educationInfo = {
 
 // Top stacks / skills
 const techStack = {
+  title: "Proficiency",
+  titleFr: "Niveau",
   viewSkillBars: true,
   experience: [
-    {Stack: "Full-stack development", progressPercentage: "85%"},
-    {Stack: "AI & Automation", progressPercentage: "80%"},
-    {Stack: "Data projects", progressPercentage: "78%"},
-    {Stack: "Cybersecurity fundamentals", progressPercentage: "70%"}
+    {
+      stackEn: "Full-stack development",
+      stackFr: "Développement full-stack",
+      progressPercentage: "85%"
+    },
+    {
+      stackEn: "AI & Automation",
+      stackFr: "IA & Automatisation",
+      progressPercentage: "80%"
+    },
+    {
+      stackEn: "Data projects",
+      stackFr: "Projets data",
+      progressPercentage: "78%"
+    },
+    {
+      stackEn: "Cybersecurity fundamentals",
+      stackFr: "Fondamentaux cybersécurité",
+      progressPercentage: "70%"
+    }
   ],
   displayCodersrank: false
 };
@@ -122,7 +210,6 @@ const workExperiences = {
 };
 
 // GitHub / Open source section
-// Disabled to avoid empty section when profile.json is not generated.
 const openSource = {
   showGithubProfile: "false",
   display: false
@@ -131,22 +218,34 @@ const openSource = {
 // Projects section
 const bigProjects = {
   title: "Featured Projects",
+  titleFr: "Projets phares",
   subtitle:
     "Concrete builds in AI, automation, and software engineering with clear outcomes.",
+  subtitleFr:
+    "Projets concrets en IA, automatisation et ingénierie logicielle avec des résultats clairs.",
   projects: [
     {
       image: require("./assets/images/nextuLogo.webp"),
       projectName: "CROUS Notifier Me",
+      projectNameFr: "CROUS Notifier Me",
       projectDesc:
         "Python automation tool that monitors CROUS updates and sends notifications to speed up decision making.",
+      projectDescFr:
+        "Outil d’automatisation Python qui surveille les mises à jour CROUS et envoie des notifications rapidement.",
       impactPoints: [
         "Automates repetitive checks and notifies as soon as updates are detected",
         "Built with a lightweight Python workflow for reliability",
         "Practical tool created from a real student need"
       ],
+      impactPointsFr: [
+        "Automatise les vérifications répétitives et alerte dès qu’un changement est détecté",
+        "Conçu en Python avec un workflow léger et fiable",
+        "Outil né d’un besoin concret étudiant"
+      ],
       footerLink: [
         {
           name: "View Code",
+          nameFr: "Voir le code",
           url: "https://github.com/khayem487/crous_notifier_me"
         }
       ]
@@ -154,16 +253,25 @@ const bigProjects = {
     {
       image: require("./assets/images/kernelins.png"),
       projectName: "Facial Recognition Attendance",
+      projectNameFr: "Pointage par reconnaissance faciale",
       projectDesc:
         "Internship project: real-time attendance tracking with OpenCV and Python for operational use.",
+      projectDescFr:
+        "Projet de stage : suivi de présence en temps réel avec OpenCV et Python pour un usage opérationnel.",
       impactPoints: [
         "Real-time face detection and attendance logging",
         "Developed during internship at Kernel Solutions & Innovation",
         "Transforms a manual attendance step into a software workflow"
       ],
+      impactPointsFr: [
+        "Détection faciale en temps réel et journalisation des présences",
+        "Développé pendant un stage chez Kernel Solutions & Innovation",
+        "Transforme une tâche manuelle de pointage en workflow logiciel"
+      ],
       footerLink: [
         {
           name: "View Code",
+          nameFr: "Voir le code",
           url: "https://github.com/khayem487/Facial-Recognition-Attendance"
         }
       ]
@@ -171,16 +279,25 @@ const bigProjects = {
     {
       image: require("./assets/images/ieeeCS.png"),
       projectName: "ASL Recognition (Hackathon - 2nd Place)",
+      projectNameFr: "Reconnaissance ASL (Hackathon - 2e place)",
       projectDesc:
         "TensorFlow + OpenCV model that recognizes American Sign Language gestures in real time.",
+      projectDescFr:
+        "Modèle TensorFlow + OpenCV qui reconnaît en temps réel des gestes de langue des signes américaine.",
       impactPoints: [
         "Awarded 2nd place in an IEEE Computer Society hackathon",
         "Real-time recognition pipeline with computer vision",
         "Focused on accessibility-oriented AI use cases"
       ],
+      impactPointsFr: [
+        "2e place dans un hackathon IEEE Computer Society",
+        "Pipeline de reconnaissance en temps réel avec vision par ordinateur",
+        "Cas d’usage IA orienté accessibilité"
+      ],
       footerLink: [
         {
           name: "View Code",
+          nameFr: "Voir le code",
           url: "https://github.com/khayem487/asl-recognition"
         }
       ]
@@ -188,16 +305,25 @@ const bigProjects = {
     {
       image: require("./assets/images/saayaHealthLogo.webp"),
       projectName: "Car Rental Client Application",
+      projectNameFr: "Application de gestion de location de voitures",
       projectDesc:
         "Full-stack platform with Spring Boot and Oracle Database for vehicle booking and client management.",
+      projectDescFr:
+        "Plateforme full-stack avec Spring Boot et Oracle Database pour réservation et gestion client.",
       impactPoints: [
         "End-to-end web architecture (backend + database + client flow)",
         "Spring Boot + Java + Oracle stack",
         "Covers booking and customer management use cases"
       ],
+      impactPointsFr: [
+        "Architecture web de bout en bout (backend + base de données + parcours client)",
+        "Stack Spring Boot + Java + Oracle",
+        "Couvre les besoins de réservation et de gestion client"
+      ],
       footerLink: [
         {
           name: "View Code",
+          nameFr: "Voir le code",
           url: "https://github.com/khayem487/car-rental-client"
         }
       ]
@@ -209,27 +335,40 @@ const bigProjects = {
 // Achievements Section
 const achievementSection = {
   title: emoji("Achievements"),
+  titleFr: emoji("Réalisations"),
   subtitle: "Competition and internship highlights.",
+  subtitleFr: "Moments clés en hackathons et en stage.",
   achievementsCards: [
     {
       title: "IEEE CS Hackathon - 2nd Place",
+      titleFr: "Hackathon IEEE CS - 2e place",
       subtitle:
         "Built an ASL recognition solution with TensorFlow and OpenCV under hackathon constraints.",
+      subtitleFr:
+        "Conception d’une solution de reconnaissance ASL avec TensorFlow et OpenCV dans un contexte hackathon.",
       image: require("./assets/images/ieeeCS.png"),
       imageAlt: "IEEE Computer Society",
       footerLink: [
-        {name: "Project", url: "https://github.com/khayem487/asl-recognition"}
+        {
+          name: "Project",
+          nameFr: "Projet",
+          url: "https://github.com/khayem487/asl-recognition"
+        }
       ]
     },
     {
       title: "Kernel Solutions Internship",
+      titleFr: "Stage Kernel Solutions",
       subtitle:
         "Delivered a functional facial recognition attendance system for real organizational usage.",
+      subtitleFr:
+        "Réalisation d’un système de pointage fonctionnel par reconnaissance faciale pour un usage réel.",
       image: require("./assets/images/kernelins.png"),
       imageAlt: "Kernel Solutions",
       footerLink: [
         {
           name: "Project",
+          nameFr: "Projet",
           url: "https://github.com/khayem487/Facial-Recognition-Attendance"
         }
       ]
@@ -274,8 +413,11 @@ const resumeSection = {
 
 const contactInfo = {
   title: emoji("Contact Me"),
+  titleFr: emoji("Me contacter"),
   subtitle:
     "Open to alternance opportunities (Sept 2026, 24 months). Feel free to reach out.",
+  subtitleFr:
+    "Disponible pour des opportunités d’alternance (septembre 2026, 24 mois). N’hésitez pas à me contacter.",
   number: "+33 6 51 01 07 92",
   email_address: "khayembg07@gmail.com"
 };
@@ -289,6 +431,7 @@ const twitterDetails = {
 const isHireable = true;
 
 export {
+  uiText,
   illustration,
   greeting,
   socialMediaLinks,

@@ -1,24 +1,30 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./Progress.scss";
 import {illustration, techStack} from "../../portfolio";
 import {Fade} from "react-reveal";
 import Build from "../../assets/lottie/build";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
+import LanguageContext from "../../contexts/LanguageContext";
 
 export default function StackProgress() {
+  const {language} = useContext(LanguageContext);
+
   if (techStack.viewSkillBars) {
+    const title = language === "fr" ? techStack.titleFr || techStack.title : techStack.title;
+
     return (
       <Fade bottom duration={1000} distance="20px">
         <div className="skills-container">
           <div className="skills-bar">
-            <h1 className="skills-heading">Proficiency</h1>
+            <h1 className="skills-heading">{title}</h1>
             {techStack.experience.map((exp, i) => {
               const progressStyle = {
                 width: exp.progressPercentage
               };
+              const label = language === "fr" ? exp.stackFr || exp.stackEn : exp.stackEn;
               return (
                 <div key={i} className="skill">
-                  <p>{exp.Stack}</p>
+                  <p>{label}</p>
                   <div className="meter">
                     <span style={progressStyle}></span>
                   </div>
@@ -31,10 +37,7 @@ export default function StackProgress() {
             {illustration.animated ? (
               <DisplayLottie animationData={Build} />
             ) : (
-              <img
-                alt="Skills"
-                src={require("../../assets/images/skill.svg")}
-              />
+              <img alt="Skills" src={require("../../assets/images/skill.svg")} />
             )}
           </div>
         </div>

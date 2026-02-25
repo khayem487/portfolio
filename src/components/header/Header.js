@@ -3,6 +3,7 @@ import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
+import LanguageContext from "../../contexts/LanguageContext";
 import {
   greeting,
   workExperiences,
@@ -12,11 +13,15 @@ import {
   talkSection,
   achievementSection,
   resumeSection,
-  bigProjects
+  bigProjects,
+  uiText
 } from "../../portfolio";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
+  const {language} = useContext(LanguageContext);
+  const t = uiText[language] || uiText.en;
+
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
@@ -45,12 +50,12 @@ function Header() {
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills">{t.nav.skills}</a>
             </li>
           )}
           {viewProjects && (
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects">{t.nav.projects}</a>
             </li>
           )}
           {viewExperience && (
@@ -65,7 +70,7 @@ function Header() {
           )}
           {viewAchievement && (
             <li>
-              <a href="#achievements">Achievements</a>
+              <a href="#achievements">{t.nav.achievements}</a>
             </li>
           )}
           {viewBlog && (
@@ -84,7 +89,7 @@ function Header() {
             </li>
           )}
           <li>
-            <a href="#contact">Contact Me</a>
+            <a href="#contact">{t.nav.contact}</a>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -97,4 +102,5 @@ function Header() {
     </Headroom>
   );
 }
+
 export default Header;
