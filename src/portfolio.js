@@ -1,15 +1,13 @@
-/* Change this file to get your personal Portfolio */
-
-// To change portfolio colors globally go to the  _globalColor.scss file
+/* Personal portfolio configuration */
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation";
 
 // Splash Screen
 const splashScreen = {
-  enabled: true,
+  enabled: false,
   animation: splashAnimation,
-  duration: 2000
+  duration: 1200
 };
 
 // Summary And Greeting Section
@@ -19,13 +17,13 @@ const illustration = {
 
 const greeting = {
   username: "Khayem Ben Ghorbel",
-  title: "Hey there, I'm Khayem Ben Ghorbel",
+  title: "Hey, I'm Khayem Ben Ghorbel 👋",
   subTitle: emoji(
-    "Computer Science Engineering student at CY Tech (France). Passionate about AI, automation, web development, and cybersecurity. Always learning, always building."
+    "Computer Science Engineering student at CY Tech (France), focused on AI, automation, and full-stack development. Currently looking for a 24-month alternance starting September 2026."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1BBtKhAiu9eu3ijApj2Aqa0YHQUj6-_6t/view?usp=sharing",
-  portfolio_repository: "https://github.com/khayem487",
+  portfolio_repository: "https://github.com/khayem487/portfolio",
   githubProfile: "https://github.com/khayem487",
   displayGreeting: true
 };
@@ -41,42 +39,21 @@ const socialMediaLinks = {
 // Skills Section
 const skillsSection = {
   title: "What I Do",
-  subTitle: "Full-stack development, AI, automation, and cybersecurity.",
+  subTitle: "Build practical software with a strong data and AI focus.",
   skills: [
-    emoji("Develop efficient and secure software solutions."),
-    emoji("Create AI and machine learning models for real-world applications."),
-    emoji("Build responsive web applications with React and Spring Boot."),
-    emoji("Participate in hackathons and collaborative innovation projects.")
+    emoji("Develop full-stack applications with React, Java, and Spring Boot."),
+    emoji("Design AI/automation workflows in Python with clean, maintainable code."),
+    emoji("Work on data-driven projects from preprocessing to model integration."),
+    emoji("Apply secure coding and DevOps habits to ship reliable solutions.")
   ],
   softwareSkills: [
-    {
-      skillName: "Python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "Java",
-      fontAwesomeClassname: "fab fa-java"
-    },
-    {
-      skillName: "C++",
-      fontAwesomeClassname: "fas fa-code"
-    },
-    {
-      skillName: "Spring Boot",
-      fontAwesomeClassname: "fas fa-leaf"
-    },
-    {
-      skillName: "React",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "Linux",
-      fontAwesomeClassname: "fab fa-linux"
-    },
-    {
-      skillName: "GitHub",
-      fontAwesomeClassname: "fab fa-github"
-    }
+    {skillName: "Python", fontAwesomeClassname: "fab fa-python"},
+    {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
+    {skillName: "C++", fontAwesomeClassname: "fas fa-code"},
+    {skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf"},
+    {skillName: "React", fontAwesomeClassname: "fab fa-react"},
+    {skillName: "Linux", fontAwesomeClassname: "fab fa-linux"},
+    {skillName: "GitHub", fontAwesomeClassname: "fab fa-github"}
   ],
   display: true
 };
@@ -90,10 +67,10 @@ const educationInfo = {
       logo: require("./assets/images/cytech.png"),
       subHeader: "Diplôme d'ingénieur en informatique",
       duration: "2025 – 2028",
-      desc: "Studying advanced computer science, AI, and cybersecurity.",
+      desc: "Engineering curriculum in software, AI, and cybersecurity.",
       descBullets: [
-        "Working on academic and team-based development projects.",
-        "Participating in hackathons and AI innovation challenges."
+        "Hands-on team projects in application development and data engineering.",
+        "Regular participation in hackathons and technical challenges."
       ]
     },
     {
@@ -102,9 +79,9 @@ const educationInfo = {
       subHeader:
         "Diplôme préparatoire aux études d'ingénieur – Ingénierie informatique",
       duration: "2023 – 2025",
-      desc: "Preparatory curriculum focused on math, physics, and computer science.",
+      desc: "Preparatory studies in mathematics, physics, algorithms, and programming.",
       descBullets: [
-        "Strengthened programming, algorithms, and logic foundations."
+        "Built strong foundations in problem solving and software fundamentals."
       ]
     }
   ]
@@ -114,18 +91,10 @@ const educationInfo = {
 const techStack = {
   viewSkillBars: true,
   experience: [
-    {
-      Stack: "Full-stack development",
-      progressPercentage: "85%"
-    },
-    {
-      Stack: "AI & Automation",
-      progressPercentage: "80%"
-    },
-    {
-      Stack: "Cybersecurity",
-      progressPercentage: "70%"
-    }
+    {Stack: "Full-stack development", progressPercentage: "85%"},
+    {Stack: "AI & Automation", progressPercentage: "80%"},
+    {Stack: "Data projects", progressPercentage: "78%"},
+    {Stack: "Cybersecurity fundamentals", progressPercentage: "70%"}
   ],
   displayCodersrank: false
 };
@@ -137,62 +106,62 @@ const workExperiences = {
 };
 
 // GitHub / Open source section
+// Disabled to avoid empty section when profile.json is not generated.
 const openSource = {
-  showGithubProfile: "true",
-  display: true
+  showGithubProfile: "false",
+  display: false
 };
 
 // Projects section
 const bigProjects = {
-  title: "Projects",
-  subtitle: "Featured work combining AI, automation, and web development.",
+  title: "Featured Projects",
+  subtitle: "Concrete builds in AI, automation, and software engineering.",
   projects: [
     {
-      image: require("./assets/images/kernelins.png"),
-      projectName: "Facial Recognition Attendance System",
+      image: require("./assets/images/nextuLogo.webp"),
+      projectName: "CROUS Notifier Me",
       projectDesc:
-        "Real-time facial recognition system using OpenCV and Python for automated attendance tracking developed during an internship at Kernel Solutions & Innovation.",
+        "Python automation tool that monitors CROUS updates and sends notifications to speed up decision making.",
       footerLink: [
         {
-          name: "View Project",
-          url: "https://github.com/khayem487/facial-recognition-attendance"
+          name: "View Code",
+          url: "https://github.com/khayem487/crous_notifier_me"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/kernelins.png"),
+      projectName: "Facial Recognition Attendance",
+      projectDesc:
+        "Internship project: real-time attendance tracking with OpenCV and Python for operational use.",
+      footerLink: [
+        {
+          name: "View Code",
+          url: "https://github.com/khayem487/Facial-Recognition-Attendance"
         }
       ]
     },
     {
       image: require("./assets/images/ieeeCS.png"),
-      projectName:
-        "American Sign Language Recognition (IEEE CS Hackathon - 2nd Place)",
+      projectName: "ASL Recognition (Hackathon - 2nd Place)",
       projectDesc:
-        "TensorFlow and OpenCV based model that recognizes ASL gestures in real-time, built for the IEEE Computer Society AI hackathon competition.",
+        "TensorFlow + OpenCV model that recognizes American Sign Language gestures in real time.",
       footerLink: [
         {
-          name: "View Project",
-          url: "https://github.com/khayem487/ASL-Recognition"
+          name: "View Code",
+          url: "https://github.com/khayem487/asl-recognition"
         }
       ]
     },
     {
       image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Car Rental Client App",
+      projectName: "Car Rental Client Application",
       projectDesc:
-        "Full-stack car rental management platform built with Spring Boot, Java, and Oracle Database.",
+        "Full-stack platform with Spring Boot and Oracle Database for vehicle booking and client management.",
       footerLink: [
         {
-          name: "View Project",
+          name: "View Code",
           url: "https://github.com/khayem487/car-rental-client"
-        }
-      ]
-    },
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "CROUS Notifier Me",
-      projectDesc:
-        "Python automation tool that checks CROUS meal updates and pushes notifications automatically.",
-      footerLink: [
-        {
-          name: "View Project",
-          url: "https://github.com/khayem487/crous_notifier_me"
         }
       ]
     }
@@ -202,33 +171,29 @@ const bigProjects = {
 
 // Achievements Section
 const achievementSection = {
-  title: emoji("Achievements And Certifications"),
-  subtitle:
-    "Highlights from hackathons, certifications, and projects I'm proud of.",
+  title: emoji("Achievements"),
+  subtitle: "Competition and internship highlights.",
   achievementsCards: [
     {
       title: "IEEE CS Hackathon - 2nd Place",
       subtitle:
-        "American Sign Language real-time recognition model built with TensorFlow and OpenCV.",
+        "Built an ASL recognition solution with TensorFlow and OpenCV under hackathon constraints.",
       image: require("./assets/images/ieeeCS.png"),
       imageAlt: "IEEE Computer Society",
       footerLink: [
-        {
-          name: "View Project",
-          url: "https://github.com/khayem487/ASL-Recognition"
-        }
+        {name: "Project", url: "https://github.com/khayem487/asl-recognition"}
       ]
     },
     {
-      title: "Kernel Solutions & Innovation Internship",
+      title: "Kernel Solutions Internship",
       subtitle:
-        "Facial recognition attendance platform deployed for automated workforce tracking.",
+        "Delivered a functional facial recognition attendance system for real organizational usage.",
       image: require("./assets/images/kernelins.png"),
       imageAlt: "Kernel Solutions",
       footerLink: [
         {
-          name: "View Project",
-          url: "https://github.com/khayem487/facial-recognition-attendance"
+          name: "Project",
+          url: "https://github.com/khayem487/Facial-Recognition-Attendance"
         }
       ]
     }
@@ -239,8 +204,7 @@ const achievementSection = {
 // Blog Section
 const blogSection = {
   title: "Blogs",
-  subtitle:
-    "I write about the lessons learned while building AI, automation, and web solutions.",
+  subtitle: "Technical notes and build logs.",
   displayMediumBlogs: "false",
   blogs: [],
   display: false
@@ -249,7 +213,7 @@ const blogSection = {
 // Talks Section
 const talkSection = {
   title: "Talks",
-  subtitle: "Happy to share knowledge through workshops and events.",
+  subtitle: "Workshops and technical sharing sessions.",
   talks: [],
   display: false
 };
@@ -257,24 +221,24 @@ const talkSection = {
 // Podcast Section
 const podcastSection = {
   title: emoji("Podcast"),
-  subtitle: "I enjoy talking about technology, automation, and education.",
+  subtitle: "Tech conversations and learning notes.",
   podcast: [],
   display: false
 };
 
-// Resume Section
+// Resume section hidden from navbar (download button remains in hero section)
 const resumeSection = {
   title: "Resume",
-  subtitle: "Feel free to download my resume or reach out directly.",
+  subtitle: "Download my latest resume.",
   downloadLink:
     "https://drive.google.com/file/d/1BBtKhAiu9eu3ijApj2Aqa0YHQUj6-_6t/view?usp=sharing",
-  display: true
+  display: false
 };
 
 const contactInfo = {
   title: emoji("Contact Me"),
   subtitle:
-    "Want to collaborate or learn more about my work? Feel free to reach out!",
+    "Open to alternance opportunities (Sept 2026, 24 months). Feel free to reach out.",
   number: "+33 6 51 01 07 92",
   email_address: "khayembg07@gmail.com"
 };
