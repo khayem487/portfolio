@@ -1,4 +1,4 @@
-import React, {useContext, useMemo, useState} from "react";
+import React, {useContext, useState} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -13,29 +13,26 @@ export default function Greeting() {
   const {isDark} = useContext(StyleContext);
   const [language, setLanguage] = useState("en");
 
-  const copy = useMemo(
-    () => ({
-      en: {
-        title: greeting.title,
-        subtitle: greeting.subTitleEn || greeting.subTitle,
-        quickFactsTitle: "Recruiter quick facts",
-        quickFacts: greeting.recruiterQuickFacts?.en || [],
-        contact: "Contact me",
-        linkedIn: "Message on LinkedIn",
-        resume: "Download resume"
-      },
-      fr: {
-        title: greeting.titleFr || greeting.title,
-        subtitle: greeting.subTitleFr || greeting.subTitle,
-        quickFactsTitle: "Infos clés recruteur",
-        quickFacts: greeting.recruiterQuickFacts?.fr || [],
-        contact: "Me contacter",
-        linkedIn: "Me contacter sur LinkedIn",
-        resume: "Télécharger le CV"
-      }
-    }),
-    []
-  );
+  const copy = {
+    en: {
+      title: greeting.title,
+      subtitle: greeting.subTitleEn || greeting.subTitle,
+      quickFactsTitle: "Recruiter quick facts",
+      quickFacts: greeting.recruiterQuickFacts?.en || [],
+      contact: "Contact me",
+      linkedIn: "Message on LinkedIn",
+      resume: "Download resume"
+    },
+    fr: {
+      title: greeting.titleFr || greeting.title,
+      subtitle: greeting.subTitleFr || greeting.subTitle,
+      quickFactsTitle: "Infos clés recruteur",
+      quickFacts: greeting.recruiterQuickFacts?.fr || [],
+      contact: "Me contacter",
+      linkedIn: "Me contacter sur LinkedIn",
+      resume: "Télécharger le CV"
+    }
+  };
 
   const activeCopy = copy[language];
 

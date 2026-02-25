@@ -1,45 +1,52 @@
 @import "../../_globalColor";
 
 .main-button {
-  background-color: $buttonColor;
-  border: solid 1px $buttonColor;
+  background: linear-gradient(135deg, $buttonColor, #3b82f6);
+  border: 1px solid rgba(37, 99, 235, 0.45);
   color: $textColorDark;
   font-weight: 700;
   width: max-content;
-  padding: 13px 22px;
-  margin-right: 50px;
-  text-transform: uppercase;
-  border-radius: 6px;
+  padding: 12px 18px;
+  text-transform: none;
+  border-radius: 999px;
   text-align: center;
   text-decoration: none;
   display: block;
-  margin-top: 20px;
-  font-size: 1rem;
+  margin-top: 10px;
+  margin-right: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
+  box-shadow: 0 10px 18px -14px rgba(37, 99, 235, 0.9);
+  transition: all 0.22s ease;
 }
+
 .main-button:hover {
-  background-color: $darkBoxShadow2;
-  color: $buttonColor;
-  transition: all 0.3s ease 0s;
-  transform: translateY(-3px);
+  background: linear-gradient(135deg, $buttonHover, #2563eb);
+  color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 24px -16px rgba(37, 99, 235, 0.9);
 }
+
 .project-button {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
+
 .project-button > .main-button {
   margin-right: 0 !important;
 }
+
 /* Media Query */
 @media (max-width: 768px) {
   .main-button {
-    font-size: 0.938rem;
-    padding: 12px 18px;
-    margin-right: 0px;
+    font-size: 0.9rem;
+    padding: 11px 16px;
+    margin-right: 0;
   }
 }
+
 @media (max-width: 320px) {
   .main-button {
     font-size: 0.75rem;

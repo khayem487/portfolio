@@ -1,30 +1,36 @@
 @import "../../_globalColor";
 
-/*React-headroom*/
+/* react-headroom */
 .headroom-wrapper {
-  max-height: 100px;
+  max-height: none;
+  position: relative;
+  z-index: 120;
 }
 
-/* header */
+.header {
+  width: min(1120px, 94%);
+  margin: 16px auto 0;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid $lightBorder1;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px -22px $lightBoxShadowDark;
+}
 
 .dark-menu {
-  background-color: $darkBackground !important;
+  background: rgba(11, 18, 32, 0.86) !important;
   color: $textColorDark;
+  border-color: rgba(148, 163, 184, 0.28);
 }
 
 .dark-menu li a {
   color: $textColorDark !important;
 }
 
-.dark-menu li a:hover {
-  background-color: $buttonColor !important;
-}
-
-.header {
-  background-color: $lightBackground1;
-  max-width: 100%;
-  padding: 15px 20px;
-  margin: 0px auto;
+.grey-color {
+  color: $subTitle;
 }
 
 .header ul {
@@ -34,55 +40,61 @@
   overflow: hidden;
 }
 
-.grey-color {
-  color: $subTitle;
-}
-
-.header li a {
-  display: block;
-  padding: 15px 20px;
-  color: $textColor;
-  text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: $headerHoverBG;
-}
-
 .header .logo {
   display: block;
-  flex: none;
   float: left;
-  font-size: 1.5em;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 6px;
   line-height: normal;
 }
 
 .header .logo-name {
   font-family: "Agustina Regular";
-  font-weight: bold;
+  font-weight: 700;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
-  padding: 0 10px;
+  padding: 0 8px;
+  font-size: 1.2rem;
+}
+
+.header li a {
+  display: block;
+  padding: 10px 14px;
+  margin: 4px 4px;
+  color: $textColor;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 0.93rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: $headerHoverBG;
+  color: $titleColor;
+}
+
+.dark-menu li a:hover {
+  background-color: rgba(59, 130, 246, 0.18) !important;
+  color: #eff6ff !important;
 }
 
 /* menu */
-
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.25s ease-out;
+  margin-top: 6px;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
 }
 
 /* menu icon */
-
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 28px 20px;
+  padding: 24px 14px;
   position: relative;
   user-select: none;
 }
@@ -114,12 +126,6 @@
 .header .menu-icon .navicon-dark:before,
 .header .menu-icon .navicon-dark:after {
   background: $textColorDark !important;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
 }
 
 .header .menu-icon .navicon:before {
@@ -131,13 +137,12 @@
 }
 
 /* menu btn */
-
 .header .menu-btn {
   display: none;
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 486px;
+  max-height: 520px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -158,25 +163,45 @@
 }
 
 /* 48em = 768px */
-
 @media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 14px;
   }
+
+  .header .logo {
+    margin-top: 0;
+    float: none;
+  }
+
   .header .menu {
     max-height: none;
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    clear: none;
+    border-top: none;
+    margin-top: 0;
   }
+
   .header .menu-icon {
     display: none;
   }
+
+  .header li {
+    float: none;
+  }
 }
+
 @media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
+  .header li a {
+    font-size: 0.84rem;
+    padding: 9px 12px;
+  }
+
+  .header .logo-name {
+    font-size: 1.06rem;
   }
 }

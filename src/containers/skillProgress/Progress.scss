@@ -1,42 +1,50 @@
 @import "../../_globalColor";
 
 .meter {
-  height: 20px;
+  height: 14px;
   position: relative;
   background: $progressBarBackground;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
+  border-radius: 999px;
+  overflow: hidden;
 }
+
 .meter > span {
   display: block;
   height: 100%;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: $progressBarSpanBG;
+  border-radius: 999px;
+  background: linear-gradient(135deg, $progressBarSpanBG, #3b82f6);
   position: relative;
-  overflow: hidden;
 }
+
 .skill {
-  line-height: 3.5vw;
+  line-height: 3.1rem;
 }
+
 .skill-bars {
   font-size: 28px;
   width: 40%;
 }
+
 .skills-container {
   display: flex;
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  border: 1px solid $lightBorder1;
+  border-radius: 14px;
+  background: $lightBackground2;
 }
+
+.dark-mode .skills-container {
+  background: rgba(15, 23, 42, 0.55);
+}
+
 .skills-container > * {
   flex: 1;
   margin-bottom: 30px;
 }
+
 .skills-image > img {
   margin-left: 80px;
   max-width: 90%;
@@ -44,11 +52,11 @@
 }
 
 /* Media Query */
-
 @media (max-width: 1456px) {
   .skills-bar {
-    line-height: 4rem;
+    line-height: 3.2rem;
   }
+
   .skills-image {
     display: none;
     order: 2;
@@ -59,10 +67,12 @@
   .skills-container {
     flex-direction: column;
   }
+
   .skills-bar {
-    line-height: 3rem;
+    line-height: 2.7rem;
     margin: 20px;
   }
+
   .skills-image {
     display: none;
     order: 2;

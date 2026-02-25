@@ -1,7 +1,18 @@
 @import "../_globalColor";
 
 .dark-mode {
-  background-color: $darkBackground;
-  color: white;
-  transition: "0.1s";
+  background: radial-gradient(
+      circle at 12% 8%,
+      rgba(30, 64, 175, 0.28),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(2, 132, 199, 0.18),
+      transparent 30%
+    ),
+    $darkBackground;
+  color: $textColorDark;
+  min-height: 100vh;
+  transition: background 0.2s ease;
 }
