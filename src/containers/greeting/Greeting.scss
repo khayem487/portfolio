@@ -72,6 +72,19 @@
   max-width: 760px;
 }
 
+.dark-mode.recruiter-card {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.theme-dark .lang-switch {
+  border-color: rgba(148, 163, 184, 0.45);
+}
+
+.theme-dark .lang-switch-btn {
+  color: #cbd5e1;
+}
+
 .recruiter-card-title {
   margin: 0 0 0.7rem;
   font-size: 0.95rem;

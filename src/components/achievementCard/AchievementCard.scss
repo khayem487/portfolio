@@ -29,6 +29,11 @@
   transition: all 0.25s ease;
 }
 
+.dark-mode.certificate-card {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
 .certificate-detail-div {
   text-align: left;
 }

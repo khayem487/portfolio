@@ -41,6 +41,20 @@
   transition: all 0.25s ease;
 }
 
+.dark-mode.project-card {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.dark-mode.project-card .project-image {
+  background: rgba(2, 6, 23, 0.35);
+}
+
+.dark-mode.project-tag {
+  background: #3b82f6;
+  color: #e2e8f0;
+}
+
 .project-detail {
   text-align: left;
 }

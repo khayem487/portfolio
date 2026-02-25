@@ -3,107 +3,65 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 26px;
+  width: 52px;
+  height: 28px;
 }
 
-/* Fix visible slider checkbox (scoped) */
 .switch input {
-  transform: scale(0.5);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
 }
 
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: $toggleSwitchSliderBG;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: 0.25s ease;
+  border: 1px solid rgba(148, 163, 184, 0.5);
 }
 
 .slider::before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 28px;
-  left: 0;
-  bottom: 0;
-  background-color: $textColorDark;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  top: 2px;
+  background-color: #0f172a;
+  transition: 0.25s ease;
 }
 
 .switch input:checked + .slider {
   background-color: $toggleCheck;
 }
 
-.switch input:focus + .slider {
-  box-shadow: $toggleCheck;
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+  background-color: #0b1220;
 }
 
-.switch input:checked + .slider::before,
-.switch input:checked + .slider > .emoji {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 999px;
   display: flex;
   align-items: center;
 }
 
 .slider.round::before {
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-.slider::after {
-  display: inline;
-  position: absolute;
-  right: 9.3%;
-  bottom: 17.5%;
-}
-
-.switch input:checked + .slider::after {
-  display: inline;
-  position: absolute;
-  right: 56.3%;
-  bottom: 14.5%;
 }
 
 .emoji {
-  z-index: 10;
+  z-index: 1;
   display: flex;
   align-items: center;
-  margin-left: 2px;
+  font-size: 0.8rem;
+  margin-left: 7px;
+  transition: transform 0.25s ease;
 }
 
-@media all and (max-width: 786px) and (min-width: 425px) {
-  .switch input:checked + .slider::after {
-    right: 60.3%;
-    bottom: 20.5%;
-  }
-  .slider::after {
-    right: 15.3%;
-    bottom: 22.5%;
-  }
-}
-
-@media all and (max-width: 2560px) and (min-width: 1552px) {
-  .slider::after {
-    bottom: 12.5% !important;
-  }
-}
-
-@media all and (max-width: 1552px) and (min-width: 1440px) {
-  .slider::after {
-    bottom: 7.5% !important;
-  }
+.switch input:checked + .slider > .emoji {
+  transform: translateX(24px);
 }

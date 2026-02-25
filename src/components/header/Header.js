@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import LanguageContext from "../../contexts/LanguageContext";
 import {
@@ -90,7 +91,12 @@ function Header() {
           <li>
             <a href="#contact">{t.nav.contact}</a>
           </li>
-          {/* Dark mode toggle disabled for visual stability */}
+          <li>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a>
+              <ToggleSwitch />
+            </a>
+          </li>
         </ul>
       </header>
     </Headroom>

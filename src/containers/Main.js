@@ -24,7 +24,7 @@ import "./Main.scss";
 
 const Main = () => {
   const [language, setLanguage] = useLocalStorage("portfolioLanguage", "fr");
-  const isDark = false;
+  const [isDark, setIsDark] = useLocalStorage("isDarkV3", false);
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
@@ -40,10 +40,12 @@ const Main = () => {
     }
   }, []);
 
-  const changeTheme = () => {};
+  const changeTheme = () => {
+    setIsDark(!isDark);
+  };
 
   return (
-    <div className={isDark ? "dark-mode" : null}>
+    <div className={isDark ? "theme-dark" : ""}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         <LanguageProvider value={{language, setLanguage}}>
           {isShowingSplashAnimation && splashScreen.enabled ? (
