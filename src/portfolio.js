@@ -293,9 +293,9 @@ const bigProjects = {
           url: "https://github.com/khayem487/Facial-Recognition-Attendance"
         },
         {
-          name: "Overview",
-          nameFr: "Apercu",
-          url: "https://khayem487.github.io/Facial-Recognition-Attendance/"
+          name: "Live Demo",
+          nameFr: "Démo live",
+          url: "https://facial-attendance-demo.onrender.com"
         }
       ]
     },
@@ -324,9 +324,9 @@ const bigProjects = {
           url: "https://github.com/khayem487/asl-recognition"
         },
         {
-          name: "Overview",
-          nameFr: "Apercu",
-          url: "https://khayem487.github.io/asl-recognition/"
+          name: "Live Demo",
+          nameFr: "Démo live",
+          url: "https://asl-recognition-demo.onrender.com"
         }
       ]
     },
@@ -355,9 +355,9 @@ const bigProjects = {
           url: "https://github.com/khayem487/car-rental-client"
         },
         {
-          name: "Overview",
-          nameFr: "Apercu",
-          url: "https://khayem487.github.io/car-rental-client/"
+          name: "Live Demo",
+          nameFr: "Démo live",
+          url: "https://car-rental-client-demo.onrender.com"
         }
       ]
     }
