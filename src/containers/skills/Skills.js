@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import {illustration, skillsSection} from "../../portfolio";
+import {illustration, skillsSection, uiText} from "../../portfolio";
 import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
@@ -20,6 +20,11 @@ export default function Skills() {
   const subTitle =
     language === "fr" ? skillsSection.subTitleFr || skillsSection.subTitle : skillsSection.subTitle;
   const bullets = language === "fr" ? skillsSection.skillsFr || skillsSection.skills : skillsSection.skills;
+  const focusAreas =
+    language === "fr"
+      ? skillsSection.focusAreasFr || skillsSection.focusAreas || []
+      : skillsSection.focusAreas || [];
+  const t = uiText[language] || uiText.en;
 
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
@@ -48,7 +53,21 @@ export default function Skills() {
             >
               {subTitle}
             </p>
+            {!!focusAreas.length && (
+              <div className={isDark ? "focus-areas-card dark-mode" : "focus-areas-card"}>
+                <p className="focus-areas-title">{t.skillsFocusTitle}</p>
+                <div className="focus-areas-list">
+                  {focusAreas.map((area, idx) => (
+                    <span key={idx} className="focus-area-chip">
+                      {area}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <SoftwareSkill />
+
             <div>
               {bullets.map((skills, i) => {
                 return (

@@ -27,6 +27,7 @@ const uiText = {
       project: "Project"
     },
     recruiterQuickFactsTitle: "Recruiter quick facts",
+    skillsFocusTitle: "Current AI focus",
     footerBuiltWith: "Built with React"
   },
   fr: {
@@ -52,6 +53,7 @@ const uiText = {
       project: "Projet"
     },
     recruiterQuickFactsTitle: "Infos clés recruteur",
+    skillsFocusTitle: "Focus IA actuel",
     footerBuiltWith: "Construit avec React"
   }
 };
@@ -108,26 +110,43 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I Do",
   titleFr: "Ce que je fais",
-  subTitle: "Build practical software with a strong data and AI focus.",
-  subTitleFr: "Créer des solutions logicielles concrètes avec une forte composante data et IA.",
+  subTitle:
+    "AI-first engineering profile: I build practical AI, data, and automation products and ship them end-to-end.",
+  subTitleFr:
+    "Profil d’ingénieur orienté IA : je construis des produits IA, data et automatisation concrets, jusqu’à la mise en production.",
+  focusAreas: [
+    "Computer Vision (OpenCV, TensorFlow)",
+    "Automation & AI agents (Python, APIs)",
+    "LLM workflows and prompt/tool orchestration",
+    "Data engineering for model-ready pipelines"
+  ],
+  focusAreasFr: [
+    "Vision par ordinateur (OpenCV, TensorFlow)",
+    "Automatisation & agents IA (Python, API)",
+    "Workflows LLM et orchestration prompts/outils",
+    "Data engineering pour pipelines prêts pour les modèles"
+  ],
   skills: [
-    emoji("Develop full-stack applications with React, Java, and Spring Boot."),
-    emoji("Design AI/automation workflows in Python with clean, maintainable code."),
-    emoji("Work on data-driven projects from preprocessing to model integration."),
-    emoji("Apply secure coding and DevOps habits to ship reliable solutions.")
+    emoji("Design AI/ML prototypes (computer vision, automation, LLM workflows) in Python."),
+    emoji("Transform models into usable products with APIs, data pipelines, and robust architecture."),
+    emoji("Build full-stack interfaces (React / Spring Boot) to deliver measurable business value."),
+    emoji("Apply secure coding and DevOps habits to deploy reliable solutions.")
   ],
   skillsFr: [
-    emoji("Développer des applications full-stack avec React, Java et Spring Boot."),
-    emoji("Concevoir des workflows IA/automatisation en Python avec un code maintenable."),
-    emoji("Mener des projets data de la préparation des données à l’intégration des modèles."),
-    emoji("Appliquer les bonnes pratiques de sécurité et DevOps pour livrer proprement.")
+    emoji("Concevoir des prototypes IA/ML (vision, automatisation, workflows LLM) en Python."),
+    emoji("Transformer les modèles en produits exploitables via API, pipelines data et architecture robuste."),
+    emoji("Développer des interfaces full-stack (React / Spring Boot) pour générer un impact concret."),
+    emoji("Appliquer les bonnes pratiques de sécurité et DevOps pour livrer des solutions fiables.")
   ],
   softwareSkills: [
     {skillName: "Python", fontAwesomeClassname: "fab fa-python"},
-    {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
-    {skillName: "C++", fontAwesomeClassname: "fas fa-code"},
-    {skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf"},
+    {skillName: "TensorFlow", fontAwesomeClassname: "fas fa-brain"},
+    {skillName: "OpenCV", fontAwesomeClassname: "fas fa-camera"},
+    {skillName: "LLM / Agents", fontAwesomeClassname: "fas fa-robot"},
+    {skillName: "Data Engineering", fontAwesomeClassname: "fas fa-database"},
     {skillName: "React", fontAwesomeClassname: "fab fa-react"},
+    {skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf"},
+    {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
     {skillName: "Linux", fontAwesomeClassname: "fab fa-linux"},
     {skillName: "GitHub", fontAwesomeClassname: "fab fa-github"}
   ],
@@ -179,19 +198,19 @@ const techStack = {
   viewSkillBars: true,
   experience: [
     {
-      stackEn: "Full-stack development",
-      stackFr: "Développement full-stack",
-      progressPercentage: "85%"
-    },
-    {
       stackEn: "AI & Automation",
       stackFr: "IA & Automatisation",
-      progressPercentage: "80%"
+      progressPercentage: "88%"
     },
     {
-      stackEn: "Data projects",
-      stackFr: "Projets data",
-      progressPercentage: "78%"
+      stackEn: "Data engineering & analytics",
+      stackFr: "Data engineering & analytique",
+      progressPercentage: "82%"
+    },
+    {
+      stackEn: "Full-stack development",
+      stackFr: "Développement full-stack",
+      progressPercentage: "80%"
     },
     {
       stackEn: "Cybersecurity fundamentals",
@@ -216,10 +235,10 @@ const openSource = {
 
 // Projects section
 const bigProjects = {
-  title: "Featured Projects",
-  titleFr: "Projets phares",
+  title: "AI-First Projects",
+  titleFr: "Projets IA en priorité",
   subtitle:
-    "Concrete builds in AI, automation, and software engineering with clear outcomes.",
+    "Concrete AI, automation, and software engineering builds with clear outcomes.",
   subtitleFr:
     "Projets concrets en IA, automatisation et ingénierie logicielle avec des résultats clairs.",
   projects: [

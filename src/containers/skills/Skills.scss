@@ -44,6 +44,52 @@
   line-height: 1.55;
 }
 
+.focus-areas-card {
+  margin: 0.9rem 0 1rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 12px;
+  border: 1px solid $lightBorder1;
+  background: $lightBackground3;
+}
+
+.focus-areas-title {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $buttonColor;
+}
+
+.focus-areas-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.focus-area-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(37, 99, 235, 0.28);
+  background: rgba(37, 99, 235, 0.1);
+  color: $titleColor;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.theme-dark .focus-areas-card {
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+.theme-dark .focus-area-chip {
+  color: $textColorDark;
+  border-color: rgba(96, 165, 250, 0.5);
+  background: rgba(59, 130, 246, 0.2);
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .skills-heading {
