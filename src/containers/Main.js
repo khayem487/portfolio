@@ -23,8 +23,8 @@ import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 const Main = () => {
-  const [isDark, setIsDark] = useLocalStorage("isDarkV2", false);
   const [language, setLanguage] = useLocalStorage("portfolioLanguage", "fr");
+  const isDark = false;
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
@@ -40,9 +40,7 @@ const Main = () => {
     }
   }, []);
 
-  const changeTheme = () => {
-    setIsDark(!isDark);
-  };
+  const changeTheme = () => {};
 
   return (
     <div className={isDark ? "dark-mode" : null}>
