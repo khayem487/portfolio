@@ -1,0 +1,21 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="60" y1="40" x2="900" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D28D9"/>
+      <stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="504" rx="28" fill="url(#bg3)"/>
+  <rect x="58" y="60" width="844" height="420" rx="22" fill="rgba(255,255,255,0.09)"/>
+
+  <circle cx="200" cy="205" r="92" fill="rgba(255,255,255,0.16)"/>
+  <rect x="132" y="137" width="136" height="136" rx="68" fill="#F5F3FF"/>
+  <text x="157" y="222" fill="#5B21B6" font-size="54" font-family="Arial, sans-serif" font-weight="700">ASL</text>
+  <rect x="126" y="292" width="148" height="50" rx="12" fill="#F59E0B"/>
+  <text x="150" y="326" fill="#111827" font-size="24" font-family="Arial, sans-serif" font-weight="700">2nd place</text>
+
+  <text x="320" y="196" fill="#F8FAFC" font-size="52" font-family="Arial, sans-serif" font-weight="700">ASL Recognition</text>
+  <text x="320" y="248" fill="#EDE9FE" font-size="29" font-family="Arial, sans-serif">TensorFlow + OpenCV · IEEE Hackathon</text>
+  <text x="320" y="298" fill="#EDE9FE" font-size="24" font-family="Arial, sans-serif">Reconnaissance gestuelle en temps réel</text>
+</svg>

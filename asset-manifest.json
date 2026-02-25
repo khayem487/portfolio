@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.e580af63.css",
-    "main.js": "/portfolio/static/js/main.8770bee1.js",
+    "main.js": "/portfolio/static/js/main.c327c857.js",
     "static/css/64.66fb42ca.chunk.css": "/portfolio/static/css/64.66fb42ca.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/portfolio/static/js/64.56dc6704.chunk.js",
     "static/css/769.1830bcc1.chunk.css": "/portfolio/static/css/769.1830bcc1.chunk.css",
@@ -15,12 +15,14 @@
     "static/media/cytech.png": "/portfolio/static/media/cytech.42142796fd73a2168cf9.png",
     "static/media/fst.png": "/portfolio/static/media/fst.1717ddb2992890bcea57.png",
     "static/media/skill.svg": "/portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
-    "static/media/saayaHealthLogo.webp": "/portfolio/static/media/saayaHealthLogo.60b27d1f184fadfce43a.webp",
-    "static/media/nextuLogo.webp": "/portfolio/static/media/nextuLogo.e033dbfa4c58c0a906aa.webp",
     "index.html": "/portfolio/index.html",
+    "static/media/project-attendance.svg": "/portfolio/static/media/project-attendance.924c2839ed547b6338514306f5729936.svg",
+    "static/media/project-asl.svg": "/portfolio/static/media/project-asl.63d98c1829142c109f1b03e541c8ad84.svg",
+    "static/media/project-car-rental.svg": "/portfolio/static/media/project-car-rental.abc88d35de95772c3ef225d0dfd73bd9.svg",
+    "static/media/project-crous.svg": "/portfolio/static/media/project-crous.b9a9400a4a9b09c77e358cc0e3da30f9.svg",
     "static/media/talksCardBack.svg": "/portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.e580af63.css.map": "/portfolio/static/css/main.e580af63.css.map",
-    "main.8770bee1.js.map": "/portfolio/static/js/main.8770bee1.js.map",
+    "main.c327c857.js.map": "/portfolio/static/js/main.c327c857.js.map",
     "64.66fb42ca.chunk.css.map": "/portfolio/static/css/64.66fb42ca.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/portfolio/static/js/64.56dc6704.chunk.js.map",
     "769.1830bcc1.chunk.css.map": "/portfolio/static/css/769.1830bcc1.chunk.css.map",
@@ -28,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.e580af63.css",
-    "static/js/main.8770bee1.js"
+    "static/js/main.c327c857.js"
   ]
 }
