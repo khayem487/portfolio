@@ -224,7 +224,7 @@ const bigProjects = {
     "Projets concrets en IA, automatisation et ingénierie logicielle avec des résultats clairs.",
   projects: [
     {
-      image: require("./assets/images/project-crous.svg"),
+      image: require("./assets/images/project-crous.svg").default,
       projectName: "CROUS Notifier Me",
       projectNameFr: "CROUS Notifier Me",
       projectDesc:
@@ -250,7 +250,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/project-attendance.svg"),
+      image: require("./assets/images/project-attendance.svg").default,
       projectName: "Facial Recognition Attendance",
       projectNameFr: "Pointage par reconnaissance faciale",
       projectDesc:
@@ -276,7 +276,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/project-asl.svg"),
+      image: require("./assets/images/project-asl.svg").default,
       projectName: "ASL Recognition (Hackathon - 2nd Place)",
       projectNameFr: "Reconnaissance ASL (Hackathon - 2e place)",
       projectDesc:
@@ -302,7 +302,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/project-car-rental.svg"),
+      image: require("./assets/images/project-car-rental.svg").default,
       projectName: "Car Rental Client Application",
       projectNameFr: "Application de gestion de location de voitures",
       projectDesc:
