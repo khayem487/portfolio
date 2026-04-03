@@ -19,10 +19,6 @@ code {
     monospace;
 }
 
-html {
-  background: #f8fafc;
-}
-
 html,
 body {
   scroll-behavior: smooth;
