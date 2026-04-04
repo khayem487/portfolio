@@ -8,6 +8,11 @@
   padding-top: 16px;
 }
 
+.theme-dark .headroom-wrapper,
+body.theme-dark .headroom-wrapper {
+  background: #0b1220;
+}
+
 .header {
   width: min(1120px, 94%);
   margin: 0 auto;
