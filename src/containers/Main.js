@@ -40,6 +40,10 @@ const Main = () => {
     }
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle("theme-dark", isDark);
+  }, [isDark]);
+
   const changeTheme = () => {
     setIsDark(!isDark);
   };

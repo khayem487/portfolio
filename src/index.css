@@ -35,6 +35,11 @@ body {
   color: #111827;
 }
 
+body.theme-dark {
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
 * {
   box-sizing: border-box;
 }
