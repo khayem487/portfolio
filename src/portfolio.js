@@ -83,11 +83,12 @@ const greeting = {
   recruiterQuickFacts: {
     en: [
       "Target roles: AI / Data / Full-stack alternance",
+      "Looking for an apprenticeship",
       "Availability: September 2026 · Duration: 24 months",
       "Mobility: France · Base: Cergy"
     ],
     fr: [
-      "Postes ciblés : alternance IA / Data / Full-stack",
+      "À la recherche d'une alternance",
       "Disponibilité : septembre 2026 · Durée : 24 mois",
       "Mobilité : France · Basé à Cergy"
     ]
