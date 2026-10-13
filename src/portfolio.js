@@ -289,6 +289,11 @@ const bigProjects = {
       ],
       footerLink: [
         {
+          name: "GitHub (private)",
+          nameFr: "GitHub (privé)",
+          url: "https://github.com/khayem487/onetech-tender-agent"
+        },
+        {
           name: "Workflow walkthrough",
           nameFr: "Démonstration du workflow",
           url: `${process.env.PUBLIC_URL}/stage-demo/`
@@ -345,6 +350,11 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/Facial-Recognition-Attendance"
+        },
+        {
+          name: "Live Demo",
+          nameFr: "Démo live",
+          url: "https://facial-attendance-demo.onrender.com"
         }
       ]
     },
@@ -371,6 +381,11 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/asl-recognition"
+        },
+        {
+          name: "Live Demo",
+          nameFr: "Démo live",
+          url: "https://asl-recognition-demo.onrender.com"
         }
       ]
     },
@@ -397,6 +412,11 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/car-rental-client"
+        },
+        {
+          name: "Live Demo",
+          nameFr: "Démo live",
+          url: "https://car-rental-client-demo.onrender.com"
         }
       ]
     }
