@@ -329,6 +329,13 @@ const bigProjects = {
     },
     {
       image: require("./assets/images/project-attendance.svg").default,
+      preview: {
+        image: `${process.env.PUBLIC_URL}/demo-previews/facial.png`,
+        alt: "Screenshot of the facial recognition attendance demo interface",
+        altFr: "Capture de l’interface de la démo de pointage par reconnaissance faciale",
+        caption: "Static screenshot of the demo interface, captured with the webcam off. Open Live Demo to try the application.",
+        captionFr: "Capture statique de l’interface de démonstration, caméra désactivée. Ouvrez Démo live pour essayer l’application."
+      },
       projectName: "Facial Recognition Attendance",
       projectNameFr: "Pointage par reconnaissance faciale",
       projectDesc:
@@ -354,12 +361,20 @@ const bigProjects = {
         {
           name: "Live Demo",
           nameFr: "Démo live",
+          isLiveDemo: true,
           url: "https://facial-attendance-demo.onrender.com"
         }
       ]
     },
     {
       image: require("./assets/images/project-asl.svg").default,
+      preview: {
+        image: `${process.env.PUBLIC_URL}/demo-previews/asl.png`,
+        alt: "Screenshot of the American Sign Language recognition demo interface",
+        altFr: "Capture de l’interface de la démo de reconnaissance de l’alphabet ASL",
+        caption: "Static screenshot of the ASL interface, captured with the webcam off. Open Live Demo to explore the application.",
+        captionFr: "Capture statique de l’interface ASL, caméra désactivée. Ouvrez Démo live pour découvrir l’application."
+      },
       projectName: "ASL Recognition (Hackathon - 2nd Place)",
       projectNameFr: "Reconnaissance ASL (Hackathon - 2e place)",
       projectDesc:
@@ -385,12 +400,20 @@ const bigProjects = {
         {
           name: "Live Demo",
           nameFr: "Démo live",
+          isLiveDemo: true,
           url: "https://asl-recognition-demo.onrender.com"
         }
       ]
     },
     {
       image: require("./assets/images/project-car-rental.svg").default,
+      preview: {
+        image: `${process.env.PUBLIC_URL}/demo-previews/rental.png`,
+        alt: "Screenshot of the Loc Auto rental demo login page",
+        altFr: "Capture de la page de connexion de la démo de location Loc Auto",
+        caption: "Static screenshot of the rental demo’s login page. Open Live Demo to access the application.",
+        captionFr: "Capture statique de la page de connexion de la démo de location. Ouvrez Démo live pour accéder à l’application."
+      },
       projectName: "Car Rental Client Application",
       projectNameFr: "Application de gestion de location de voitures",
       projectDesc:
@@ -416,6 +439,7 @@ const bigProjects = {
         {
           name: "Live Demo",
           nameFr: "Démo live",
+          isLiveDemo: true,
           url: "https://car-rental-client-demo.onrender.com"
         }
       ]

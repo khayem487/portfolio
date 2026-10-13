@@ -29,6 +29,7 @@
   border-radius: 12px;
   border: 1px solid $lightBorder1;
   justify-content: flex-start;
+  min-width: 0;
 }
 
 .project-card-light {
@@ -109,11 +110,160 @@
   justify-content: center;
   white-space: nowrap;
   line-height: 1.5;
-  margin: 0 0.5rem 0.5rem 0;
+  margin: 0;
   padding: 0 0.85em;
   cursor: pointer;
   text-decoration: none;
   transition: 0.2s ease-in;
+}
+
+.project-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.project-link-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+.project-startup-note {
+  max-width: 15rem;
+  margin-top: 0.35rem;
+  color: $cardSubtitle;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.project-preview {
+  border: 1px solid $lightBorder1;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+.project-preview summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6rem;
+  color: $titleColor;
+  cursor: pointer;
+  list-style: none;
+}
+
+.project-preview summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-preview summary:focus-visible {
+  outline: 3px solid $buttonColor;
+  outline-offset: -3px;
+  border-radius: 9px;
+}
+
+.project-preview-thumbnail {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: 138px;
+  object-fit: contain;
+  object-position: top center;
+  border-radius: 5px;
+}
+
+.project-preview-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.3rem 0.55rem;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-preview-summary::before {
+  content: "+";
+  color: $buttonColor;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.project-preview-type {
+  color: $cardSubtitle;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+.project-preview[open] .project-preview-thumbnail {
+  display: none;
+}
+
+.project-preview[open] .project-preview-summary {
+  margin-top: 0;
+}
+
+.project-preview[open] .project-preview-summary::before {
+  content: "−";
+}
+
+.project-preview-figure {
+  margin: 0;
+  padding: 0 0.6rem;
+}
+
+.project-preview-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.project-preview-figure figcaption {
+  margin-top: 0.6rem;
+  color: $cardSubtitle;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.project-preview-fullsize {
+  display: inline-block;
+  margin: 0.5rem 0.6rem 0.75rem;
+  color: $buttonColor;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-underline-offset: 3px;
+}
+
+.project-preview-fullsize:focus-visible {
+  outline: 3px solid $buttonColor;
+  outline-offset: 3px;
+}
+
+.project-card-dark .project-preview {
+  background: rgba(2, 6, 23, 0.35);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.project-card-dark .project-preview summary {
+  color: #e2e8f0;
+}
+
+.project-card-dark .project-preview-type,
+.project-card-dark .project-preview-figure figcaption,
+.project-card-dark .project-startup-note {
+  color: #cbd5e1;
+}
+
+.project-card-dark .project-preview-fullsize,
+.project-card-dark .project-preview-summary::before {
+  color: #93c5fd;
 }
 
 .project-tag:focus-visible {
