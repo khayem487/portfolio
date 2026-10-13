@@ -8,6 +8,7 @@ const uiText = {
     nav: {
       skills: "Skills",
       projects: "Projects",
+      experience: "Experience",
       achievements: "Achievements",
       contact: "Contact"
     },
@@ -15,6 +16,7 @@ const uiText = {
       proficiency: "Proficiency",
       education: "Education",
       projects: "Featured Projects",
+      experience: "Professional experience",
       achievements: "Achievements",
       contact: "Contact Me",
       whatIDo: "What I Do"
@@ -34,6 +36,7 @@ const uiText = {
     nav: {
       skills: "Compétences",
       projects: "Projets",
+      experience: "Expérience",
       achievements: "Réalisations",
       contact: "Contact"
     },
@@ -41,6 +44,7 @@ const uiText = {
       proficiency: "Niveau",
       education: "Formation",
       projects: "Projets phares",
+      experience: "Expérience professionnelle",
       achievements: "Réalisations",
       contact: "Me contacter",
       whatIDo: "Ce que je fais"
@@ -75,21 +79,22 @@ const greeting = {
   title: "Hey, I'm Khayem Ben Ghorbel",
   titleFr: "Salut, je suis Khayem Ben Ghorbel",
   subTitleEn: emoji(
-    "Computer Science Engineering student at CY Tech (France), focused on AI, automation, and full-stack development. Currently looking for a 24-month alternance starting September 2026."
+    "Second-year Computer Science Engineering student at CY Tech, focused on AI, Python, and software development. Seeking a 4–6 month internship from March 2027, followed by a 12-month work-study placement (contrat de professionnalisation) from September 2027."
   ),
   subTitleFr: emoji(
-    "Étudiant ingénieur en informatique à CY Tech (France), spécialisé en IA, automatisation et développement full-stack. Je recherche une alternance de 24 mois à partir de septembre 2026."
+    "Élève ingénieur en 2e année à CY Tech, orienté IA, Python et développement logiciel. Je recherche un stage de 4 à 6 mois dès mars 2027, puis une alternance en contrat de professionnalisation de 12 mois dès septembre 2027."
   ),
   recruiterQuickFacts: {
     en: [
-      "Target roles: AI / Data / Full-stack alternance",
-      "Looking for an apprenticeship",
-      "Availability: September 2026 · Duration: 24 months",
+      "Target roles: AI / Data / Software engineering",
+      "Internship: March 2027 · 4–6 months",
+      "Work-study: September 2027 · 12 months · contrat de professionnalisation",
       "Mobility: France · Base: Cergy"
     ],
     fr: [
-      "À la recherche d'une alternance",
-      "Disponibilité : septembre 2026 · Durée : 24 mois",
+      "Domaines : IA / Data / Développement logiciel",
+      "Stage : mars 2027 · 4 à 6 mois",
+      "Alternance : septembre 2027 · 12 mois · contrat de professionnalisation",
       "Mobilité : France · Basé à Cergy"
     ]
   },
@@ -102,7 +107,7 @@ const greeting = {
 // Social Media Links
 const socialMediaLinks = {
   github: "https://github.com/khayem487",
-  linkedin: "https://linkedin.com/in/khayem-ben-ghorbel",
+  linkedin: "https://www.linkedin.com/in/khayem-bg/",
   gmail: "khayembg07@gmail.com",
   display: true
 };
@@ -112,17 +117,17 @@ const skillsSection = {
   title: "What I Do",
   titleFr: "Ce que je fais",
   subTitle:
-    "AI-first engineering profile: I build practical AI, data, and automation products and ship them end-to-end.",
+    "I build AI and automation prototypes, from document processing and data pipelines to usable software.",
   subTitleFr:
-    "Profil d’ingénieur orienté IA : je construis des produits IA, data et automatisation concrets, jusqu’à la mise en production.",
+    "Je conçois des prototypes IA et d’automatisation, du traitement documentaire aux pipelines de données et aux applications.",
   focusAreas: [
-    "Computer Vision (OpenCV, TensorFlow)",
+    "Computer Vision (OpenCV, MediaPipe, scikit-learn)",
     "Automation & AI agents (Python, APIs)",
     "LLM workflows and prompt/tool orchestration",
     "Data engineering for model-ready pipelines"
   ],
   focusAreasFr: [
-    "Vision par ordinateur (OpenCV, TensorFlow)",
+    "Vision par ordinateur (OpenCV, MediaPipe, scikit-learn)",
     "Automatisation & agents IA (Python, API)",
     "Workflows LLM et orchestration prompts/outils",
     "Data engineering pour pipelines prêts pour les modèles"
@@ -141,10 +146,13 @@ const skillsSection = {
   ],
   softwareSkills: [
     {skillName: "Python", fontAwesomeClassname: "fab fa-python"},
-    {skillName: "TensorFlow", fontAwesomeClassname: "fas fa-brain"},
+    {skillName: "scikit-learn", fontAwesomeClassname: "fas fa-brain"},
     {skillName: "OpenCV", fontAwesomeClassname: "fas fa-camera"},
     {skillName: "LLM / Agents", fontAwesomeClassname: "fas fa-robot"},
     {skillName: "Data Engineering", fontAwesomeClassname: "fas fa-database"},
+    {skillName: "PostgreSQL", fontAwesomeClassname: "fas fa-database"},
+    {skillName: "Docker", fontAwesomeClassname: "fab fa-docker"},
+    {skillName: "MCP / n8n", fontAwesomeClassname: "fas fa-project-diagram"},
     {skillName: "React", fontAwesomeClassname: "fab fa-react"},
     {skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf"},
     {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
@@ -196,7 +204,7 @@ const educationInfo = {
 const techStack = {
   title: "Proficiency",
   titleFr: "Niveau",
-  viewSkillBars: true,
+  viewSkillBars: false,
   experience: [
     {
       stackEn: "AI & Automation",
@@ -224,8 +232,28 @@ const techStack = {
 
 // Work experience section
 const workExperiences = {
-  display: false,
-  experience: []
+  display: true,
+  experience: [
+    {
+      company: "One Tech Business Solutions",
+      role: "AI & Automation Intern — R&D",
+      roleFr: "Stagiaire IA et automatisation — R&D",
+      date: "June–August 2026 · Tunis, Tunisia · 2 months",
+      dateFr: "Juin–août 2026 · Tunis, Tunisie · 2 mois",
+      desc: "Built a functional Python proof of concept for AI-assisted analysis of public calls for tenders.",
+      descFr: "Développement d’un prototype fonctionnel en Python pour assister l’analyse d’appels d’offres publics.",
+      descBullets: [
+        "Document collection and extraction, requirements analysis, and structured Go/No-Go decision support.",
+        "Orchestration of agents and tools, database integration, and workflow automation.",
+        "Iterative development with the R&D team, testing, technical documentation, and demonstration."
+      ],
+      descBulletsFr: [
+        "Collecte et extraction documentaire, analyse des exigences et aide à la décision Go/No-Go structurée.",
+        "Orchestration d’agents et d’outils, intégration d’une base de données et automatisation des workflows.",
+        "Développement itératif avec l’équipe R&D, tests, documentation technique et démonstration."
+      ]
+    }
+  ]
 };
 
 // GitHub / Open source section
@@ -243,6 +271,31 @@ const bigProjects = {
   subtitleFr:
     "Projets concrets en IA, automatisation et ingénierie logicielle avec des résultats clairs.",
   projects: [
+    {
+      image: require("./assets/images/project-tender.svg").default,
+      projectName: "AI-assisted Tender Analysis",
+      projectNameFr: "Analyse d’appels d’offres par agents IA",
+      projectDesc: "Summer 2026 internship at One Tech Business Solutions: a functional prototype for public tender monitoring and decision support.",
+      projectDescFr: "Stage été 2026 chez One Tech Business Solutions : un prototype fonctionnel de veille et d’aide à la décision sur les appels d’offres publics.",
+      impactPoints: [
+        "My work: Python collection, document extraction/OCR, and PostgreSQL integration",
+        "Agent and tool orchestration for traceable Go/No-Go analysis; MCP and n8n workflows",
+        "Structured outputs, duplicate prevention, tests, and technical documentation"
+      ],
+      impactPointsFr: [
+        "Ma contribution : collecte Python, extraction documentaire/OCR et intégration PostgreSQL",
+        "Orchestration d’agents et d’outils pour une analyse Go/No-Go traçable ; workflows MCP et n8n",
+        "Sorties structurées, prévention des doublons, tests et documentation technique"
+      ],
+      footerLink: [
+        {
+          name: "Workflow walkthrough",
+          nameFr: "Démonstration du workflow",
+          url: `${process.env.PUBLIC_URL}/stage-demo/`
+        },
+        {name: "Internship details", nameFr: "Détails du stage", url: "#experience"}
+      ]
+    },
     {
       image: require("./assets/images/project-crous.svg").default,
       projectName: "CROUS Notifier Me",
@@ -292,11 +345,6 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/Facial-Recognition-Attendance"
-        },
-        {
-          name: "Live Demo",
-          nameFr: "Démo live",
-          url: "https://facial-attendance-demo.onrender.com"
         }
       ]
     },
@@ -305,9 +353,9 @@ const bigProjects = {
       projectName: "ASL Recognition (Hackathon - 2nd Place)",
       projectNameFr: "Reconnaissance ASL (Hackathon - 2e place)",
       projectDesc:
-        "TensorFlow + OpenCV model that recognizes American Sign Language gestures in real time.",
+        "Computer vision pipeline for ASL gesture recognition using OpenCV, MediaPipe, and a scikit-learn Random Forest classifier.",
       projectDescFr:
-        "Modèle TensorFlow + OpenCV qui reconnaît en temps réel des gestes de langue des signes américaine.",
+        "Pipeline de reconnaissance de gestes ASL avec OpenCV, MediaPipe et un classifieur Random Forest scikit-learn.",
       impactPoints: [
         "Awarded 2nd place in an IEEE Computer Society hackathon",
         "Real-time recognition pipeline with computer vision",
@@ -323,11 +371,6 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/asl-recognition"
-        },
-        {
-          name: "Live Demo",
-          nameFr: "Démo live",
-          url: "https://asl-recognition-demo.onrender.com"
         }
       ]
     },
@@ -354,11 +397,6 @@ const bigProjects = {
           name: "View Code",
           nameFr: "Voir le code",
           url: "https://github.com/khayem487/car-rental-client"
-        },
-        {
-          name: "Live Demo",
-          nameFr: "Démo live",
-          url: "https://car-rental-client-demo.onrender.com"
         }
       ]
     }
@@ -377,9 +415,9 @@ const achievementSection = {
       title: "IEEE CS Hackathon - 2nd Place",
       titleFr: "Hackathon IEEE CS - 2e place",
       subtitle:
-        "Built an ASL recognition solution with TensorFlow and OpenCV under hackathon constraints.",
+        "Built an ASL gesture recognition solution using computer vision under hackathon constraints.",
       subtitleFr:
-        "Conception d’une solution de reconnaissance ASL avec TensorFlow et OpenCV dans un contexte hackathon.",
+        "Conception d’une solution de reconnaissance de gestes ASL par vision par ordinateur dans un contexte hackathon.",
       image: require("./assets/images/ieeeCS.png"),
       imageAlt: "IEEE Computer Society",
       footerLink: [
@@ -448,9 +486,9 @@ const contactInfo = {
   title: emoji("Contact Me"),
   titleFr: emoji("Me contacter"),
   subtitle:
-    "Open to alternance opportunities (Sept 2026, 24 months). Feel free to reach out.",
+    "Seeking an AI, data, or software internship from March 2027 (4–6 months), followed by a 12-month contrat de professionnalisation from September 2027. Let’s discuss your team’s projects.",
   subtitleFr:
-    "Disponible pour des opportunités d’alternance (septembre 2026, 24 mois). N’hésitez pas à me contacter.",
+    "À la recherche d’un stage en IA, data ou développement dès mars 2027 (4 à 6 mois), puis d’une alternance en contrat de professionnalisation de 12 mois dès septembre 2027. Échangeons sur les projets de votre équipe.",
   number: "+33 6 51 01 07 92",
   email_address: "khayembg07@gmail.com"
 };

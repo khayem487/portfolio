@@ -1,3 +1,27 @@
+.internship-card {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 12px;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: rgba(59, 130, 246, 0.04);
+  line-height: 1.6;
+}
+
+.internship-card h2 {
+  margin-top: 0;
+}
+
+.internship-card h3 {
+  font-size: 1.15rem;
+}
+
+.internship-card li {
+  margin-bottom: 0.5rem;
+}
+
+.internship-date {
+  font-weight: 600;
+}
+
 .experience-cards-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));

@@ -1,5 +1,11 @@
 @import "../_globalColor";
 
+.portfolio-page {
+  // Keep the header's top margin inside the page's background.
+  display: flow-root;
+  min-height: 100vh;
+}
+
 .theme-dark {
   background: radial-gradient(
       circle at 12% 8%,
@@ -13,7 +19,6 @@
     ),
     $darkBackground;
   color: $textColorDark;
-  min-height: 100vh;
   transition: background 0.2s ease;
 }
 
@@ -24,4 +29,11 @@
 
 .theme-dark .subTitle {
   color: #94a3b8 !important;
+}
+#skills,
+#projects,
+#experience,
+#achievements,
+#contact {
+  scroll-margin-top: 110px;
 }

@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -20,6 +20,7 @@ import {
 function Header() {
   const {isDark} = useContext(StyleContext);
   const {language} = useContext(LanguageContext);
+  const [menuOpen, setMenuOpen] = useState(false);
   const t = uiText[language] || uiText.en;
 
   const viewExperience = workExperiences.display;
@@ -39,15 +40,21 @@ function Header() {
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
         </a>
-        <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label
+        <button
+          type="button"
           className="menu-icon"
-          htmlFor="menu-btn"
-          style={{color: "white"}}
+          aria-label={language === "fr" ? "Menu de navigation" : "Navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls="portfolio-navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
-        </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
+        </button>
+        <ul
+          id="portfolio-navigation"
+          className={`${isDark ? "dark-menu menu" : "menu"}${menuOpen ? " menu-open" : ""}`}
+          onClick={() => setMenuOpen(false)}
+        >
           {viewSkills && (
             <li>
               <a href="#skills">{t.nav.skills}</a>
@@ -60,7 +67,7 @@ function Header() {
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience">{t.nav.experience}</a>
             </li>
           )}
           {viewOpenSource && (
@@ -92,10 +99,9 @@ function Header() {
             <a href="#contact">{t.nav.contact}</a>
           </li>
           <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
+            <div className="theme-control">
               <ToggleSwitch />
-            </a>
+            </div>
           </li>
         </ul>
       </header>

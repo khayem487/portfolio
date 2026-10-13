@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useLayoutEffect, useState} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
@@ -28,6 +28,18 @@ const Main = () => {
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
+  useLayoutEffect(() => {
+    document.documentElement.dataset.theme = isDark ? "dark" : "light";
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) {
+      themeColor.content = isDark ? "#0b1220" : "#f8fafc";
+    }
+  }, [isDark]);
+
+  useEffect(() => {
+    document.documentElement.lang = language === "en" ? "en" : "fr";
+  }, [language]);
+
   useEffect(() => {
     if (splashScreen.enabled) {
       const splashTimer = setTimeout(
@@ -45,7 +57,7 @@ const Main = () => {
   };
 
   return (
-    <div className={isDark ? "theme-dark" : ""}>
+    <div className={`portfolio-page${isDark ? " theme-dark" : ""}`}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         <LanguageProvider value={{language, setLanguage}}>
           {isShowingSplashAnimation && splashScreen.enabled ? (

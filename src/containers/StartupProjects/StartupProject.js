@@ -6,14 +6,6 @@ import StyleContext from "../../contexts/StyleContext";
 import LanguageContext from "../../contexts/LanguageContext";
 
 export default function StartupProject() {
-  function openUrlInNewTab(url) {
-    if (!url) {
-      return;
-    }
-    const win = window.open(url, "_blank");
-    win.focus();
-  }
-
   const {isDark} = useContext(StyleContext);
   const {language} = useContext(LanguageContext);
   const t = uiText[language] || uiText.en;
@@ -86,13 +78,15 @@ export default function StartupProject() {
                               ? link.nameFr || t.actions.viewCode
                               : link.name || t.actions.viewCode;
                           return (
-                            <span
+                            <a
                               key={linkIdx}
                               className={isDark ? "dark-mode project-tag" : "project-tag"}
-                              onClick={() => openUrlInNewTab(link.url)}
+                              href={link.url}
+                              target={link.url.startsWith("#") ? undefined : "_blank"}
+                              rel={link.url.startsWith("#") ? undefined : "noopener noreferrer"}
                             >
                               {label}
-                            </span>
+                            </a>
                           );
                         })}
                       </div>

@@ -82,7 +82,7 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1rem;
 }
 
@@ -97,7 +97,7 @@
   line-height: 1.45;
 }
 
-.project-card-footer span.project-tag {
+.project-card-footer a.project-tag {
   background: $buttonColor;
   color: $lightBackground3;
   vertical-align: middle;
@@ -112,7 +112,13 @@
   margin: 0 0.5rem 0.5rem 0;
   padding: 0 0.85em;
   cursor: pointer;
+  text-decoration: none;
   transition: 0.2s ease-in;
+}
+
+.project-tag:focus-visible {
+  outline: 3px solid $buttonColor;
+  outline-offset: 4px;
 }
 
 @media (max-width: 768px) {

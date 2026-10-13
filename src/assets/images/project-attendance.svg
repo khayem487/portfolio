@@ -18,7 +18,7 @@
   <rect x="130" y="278" width="136" height="66" rx="12" fill="#2563EB"/>
   <path d="M167 309L188 329L230 287" stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <text x="312" y="196" fill="#F8FAFC" font-size="52" font-family="Arial, sans-serif" font-weight="700">Facial Recognition Attendance</text>
+  <text x="312" y="196" fill="#F8FAFC" font-size="38" font-family="Arial, sans-serif" font-weight="700">Facial Recognition Attendance</text>
   <text x="312" y="250" fill="#BFDBFE" font-size="29" font-family="Arial, sans-serif">OpenCV + Python · Pointage en temps réel</text>
   <text x="312" y="300" fill="#BFDBFE" font-size="24" font-family="Arial, sans-serif">Détection faciale et journalisation automatisée</text>
 </svg>

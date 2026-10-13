@@ -24,6 +24,16 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  background-color: #f8fafc;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  background-color: #0b1220;
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
   font: 18px / 1.45 Montserrat, "Montserrat", sans-serif;
@@ -31,6 +41,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
   color: #111827;
+}
+
+html[data-theme="dark"] body {
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 * {
