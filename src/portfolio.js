@@ -289,8 +289,8 @@ const bigProjects = {
       ],
       footerLink: [
         {
-          name: "GitHub (private)",
-          nameFr: "GitHub (privé)",
+          name: "GitHub",
+          nameFr: "GitHub",
           url: "https://github.com/khayem487/onetech-tender-agent"
         },
         {
