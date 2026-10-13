@@ -16,7 +16,7 @@
   <circle cx="162" cy="278" r="9" fill="#ECFEFF"/>
   <circle cx="254" cy="278" r="9" fill="#ECFEFF"/>
 
-  <text x="332" y="196" fill="#F0FDFF" font-size="48" font-family="Arial, sans-serif" font-weight="700">Car Rental Client Application</text>
+  <text x="332" y="196" fill="#F0FDFF" font-size="38" font-family="Arial, sans-serif" font-weight="700">Car Rental Client Application</text>
   <text x="332" y="250" fill="#CCFBF1" font-size="29" font-family="Arial, sans-serif">Spring Boot + Oracle · Plateforme full-stack</text>
   <text x="332" y="300" fill="#CCFBF1" font-size="24" font-family="Arial, sans-serif">Réservation, suivi et gestion des clients</text>
 </svg>

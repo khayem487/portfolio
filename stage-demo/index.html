@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Démonstration pédagogique du parcours d'analyse d'un appel d'offres : extraction sourcée, critères, score et validation humaine. Données entièrement fictives.">
+  <title>De l'appel d'offres à la décision · Khayem Ben Ghorbel</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1220;--panel:#121d30;--panel-2:#18263c;--text:#f1f5f9;--muted:#a9b9cf;--border:#30415b;--brand:#90b5ff;--brand-solid:#2563eb;--brand-quiet:#1a3055;--green:#80dfb4;--green-bg:#12392e;--amber:#f9d383;--amber-bg:#3d321e;--shadow:0 20px 60px #02061730}
+    :root[data-theme="light"]{color-scheme:light;--bg:#f4f7fc;--panel:#fff;--panel-2:#eef3fa;--text:#10213a;--muted:#50627a;--border:#ced8e8;--brand:#1d4ed8;--brand-solid:#2563eb;--brand-quiet:#e8efff;--green:#126444;--green-bg:#e2f6ec;--amber:#80520a;--amber-bg:#fff2d5;--shadow:0 20px 60px #10213a0b}
+    *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}button,input{font:inherit}button,a,input{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:default;opacity:.5}a{color:var(--brand)}:focus-visible{outline:3px solid var(--brand);outline-offset:4px}button:focus:not(:focus-visible){outline:none}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.2;letter-spacing:-.035em}h1{font-size:clamp(2.3rem,5.2vw,4rem);max-width:850px;font-weight:750}h2{font-size:clamp(1.55rem,3vw,2.15rem)}h3{font-size:1.08rem;letter-spacing:-.015em}.wrap{width:min(1140px,calc(100% - 48px));margin:auto}.skip{position:absolute;top:-100px;left:20px;background:var(--panel);padding:10px;z-index:5}.skip:focus{top:10px}header{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:88px;border-bottom:1px solid var(--border)}.identity{font-size:.95rem;color:var(--text);font-weight:650;text-decoration:none}.identity span{display:block;color:var(--muted);font-size:.75rem;font-weight:400}.header-actions{display:flex;gap:8px;align-items:center}.quiet-button{border:1px solid var(--border);color:var(--text);background:transparent;border-radius:10px;padding:8px 12px;font-size:.85rem}.quiet-button:hover{background:var(--panel-2)}.hero{padding:46px 0 28px}.eyebrow{font-size:.74rem;font-weight:750;color:var(--brand);letter-spacing:.13em;text-transform:uppercase;margin-bottom:14px}.hero-copy{color:var(--muted);max-width:760px;margin:18px 0 24px;font-size:1.05rem}.hero-meta{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.84rem}.hero-meta strong{color:var(--text);font-weight:600}.disclosure{margin:25px 0 0;border:1px solid var(--border);background:var(--panel);border-radius:12px;padding:13px 17px;display:flex;align-items:flex-start;gap:11px;font-size:.83rem;color:var(--muted)}.disclosure strong{color:var(--text)}.disclosure svg{width:20px;height:20px;flex:none;color:var(--brand);margin-top:3px}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;list-style:none;padding:0;margin:0 0 23px}.step{width:100%;display:flex;align-items:center;gap:10px;background:transparent;color:var(--muted);border:1px solid var(--border);border-radius:11px;text-align:left;padding:13px 12px;font-size:.84rem;font-weight:600;min-height:62px}.step:hover{background:var(--panel)}.step[aria-current="step"]{background:var(--brand-quiet);border-color:var(--brand);color:var(--text)}.step-number{display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;width:27px;height:27px;flex:none;font-size:.75rem}.step[aria-current="step"] .step-number{background:var(--brand-solid);border-color:var(--brand-solid);color:white}.step.is-complete .step-number{color:var(--green);border-color:var(--green)}.workspace{background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:30px;box-shadow:var(--shadow);min-height:540px}.panel[hidden]{display:none}.panel-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:22px;margin-bottom:25px}.panel-intro p{color:var(--muted);margin-top:10px;max-width:690px;font-size:.94rem}.tag{display:inline-flex;align-items:center;padding:4px 9px;border-radius:6px;font-size:.72rem;font-weight:650;background:var(--panel-2);color:var(--muted);white-space:nowrap}.tag.good{background:var(--green-bg);color:var(--green)}.tag.warn{background:var(--amber-bg);color:var(--amber)}.grid-two{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px}.card{background:var(--panel-2);border:1px solid var(--border);border-radius:13px;padding:20px}.card p{color:var(--muted);font-size:.9rem;margin-top:10px}.card ul{padding-left:19px;margin:12px 0 0;color:var(--muted);font-size:.9rem}.card li+li{margin-top:5px}.document{border:1px solid var(--border);border-radius:12px;overflow:hidden}.document-bar{background:var(--panel-2);display:flex;justify-content:space-between;gap:16px;padding:11px 17px;font-size:.77rem;color:var(--muted);border-bottom:1px solid var(--border)}.document-paper{padding:25px;min-height:260px}.document-paper .doc-kicker{color:var(--muted);font-size:.65rem;text-transform:uppercase;letter-spacing:.16em;margin-bottom:15px}.document-paper h3{font-family:Georgia,serif;font-size:1.35rem;line-height:1.4;letter-spacing:0}.document-paper p{font-family:Georgia,serif;line-height:1.75;font-size:.94rem;margin-top:17px}.document-pages{display:flex;gap:7px;align-items:center;padding:12px 17px;border-top:1px solid var(--border);background:var(--panel-2)}.page-button{width:32px;height:32px;border-radius:6px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:.8rem}.page-button[aria-current="page"]{background:var(--brand-solid);border-color:var(--brand-solid);color:white}.document-pages span{font-size:.75rem;color:var(--muted);margin-right:7px}.source-note{font-size:.76rem!important;color:var(--muted);margin:12px 0 0}.flow{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:16px}.flow span{border:1px solid var(--border);border-radius:5px;padding:4px 8px;font-size:.7rem;color:var(--text)}.flow b{font-size:.8rem;color:var(--muted)}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.86rem}th{text-align:left;color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;font-weight:650;padding:12px;border-bottom:1px solid var(--border)}td{padding:14px 12px;border-bottom:1px solid var(--border);vertical-align:top}td:first-child{font-weight:650}tbody tr:last-child td{border-bottom:0}.evidence-button{background:var(--brand-quiet);color:var(--brand);font-size:.75rem;border:1px solid transparent;border-radius:6px;padding:5px 9px;white-space:nowrap}.evidence-button[aria-pressed="true"]{border-color:var(--brand)}.evidence{margin-top:22px;border-left:3px solid var(--brand);background:var(--panel-2);border-radius:0 10px 10px 0;padding:17px 20px}.evidence h3{font-size:.83rem}.evidence blockquote{margin:10px 0;font-size:.94rem;color:var(--text)}.text-button{border:0;background:transparent;color:var(--brand);padding:3px 0;font-size:.8rem;text-decoration:underline;text-underline-offset:3px}.checks{list-style:none;padding:0;margin:0}.check-row{display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid var(--border);padding:16px 0}.check-row:first-child{padding-top:0}.check-row:last-child{border:0;padding-bottom:0}.check-mark{width:25px;height:25px;flex:none;display:grid;place-items:center;background:var(--green-bg);color:var(--green);font-weight:700;border-radius:50%;font-size:.8rem}.check-mark.pending{background:var(--amber-bg);color:var(--amber)}.check-row .check-title{font-weight:650;font-size:.9rem}.check-row p{color:var(--muted);font-size:.8rem;margin-top:3px}.check-row .tag{margin-left:auto}.notice{padding:14px 17px;border-radius:10px;background:var(--amber-bg);color:var(--amber);font-size:.84rem;margin-top:21px}.notice strong{display:block}.score-layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:28px;align-items:start}.score-card{text-align:center;padding:27px 16px;background:var(--panel-2);border-radius:13px;border:1px solid var(--border)}.score-value{font-size:4rem;line-height:1;font-weight:750;letter-spacing:-.07em;color:var(--brand)}.score-value small{font-size:1rem;color:var(--muted);letter-spacing:0;font-weight:500}.score-card p{font-size:.76rem;color:var(--muted);margin-top:9px}.score-card .tag{margin-top:19px;white-space:normal}.score-row{padding:0 0 18px}.score-label{display:flex;justify-content:space-between;gap:16px;font-size:.86rem}.score-label span{color:var(--muted);font-size:.78rem}.bar-track{height:6px;background:var(--panel-2);border-radius:3px;margin:8px 0 4px;overflow:hidden}.bar-fill{height:100%;background:var(--brand);border-radius:3px}.score-description{color:var(--muted);font-size:.76rem}.calculation{border-top:1px solid var(--border);padding-top:15px;font-size:.8rem;color:var(--muted)}.calculation strong{color:var(--text)}.decision-card{background:var(--panel-2);border:1px solid var(--border);border-radius:13px;padding:23px}.decision-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.decision-title{font-size:1.7rem;color:var(--amber);font-weight:720;letter-spacing:-.03em;margin:8px 0}.decision-title.approved{color:var(--green)}.decision-card>p{font-size:.88rem;color:var(--muted)}.human-check{display:flex;align-items:flex-start;gap:11px;margin-top:20px;font-size:.84rem;padding-top:17px;border-top:1px solid var(--border)}.human-check input{width:18px;height:18px;flex:none;margin:4px 0 0;accent-color:var(--brand-solid)}.primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand-solid);color:#fff;border:1px solid var(--brand-solid);border-radius:9px;padding:10px 18px;font-size:.87rem;font-weight:650;min-height:44px}.primary:hover:not(:disabled){filter:brightness(1.12)}.validation-button{margin-top:19px}.confirmation{padding:13px 16px;background:var(--green-bg);color:var(--green);border-radius:9px;font-size:.85rem;margin-top:16px}.confirmation[hidden]{display:none}.summary-list{margin-top:14px}.summary-list div{padding:11px 0;border-bottom:1px solid var(--border);font-size:.83rem}.summary-list div:last-child{border:0}.summary-list strong{display:block;color:var(--text);font-size:.76rem}.summary-list span{color:var(--muted)}.panel-footer{display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid var(--border);margin-top:27px;padding-top:20px}.panel-footer .progress{color:var(--muted);font-size:.76rem}.footer-buttons{display:flex;gap:9px}.outro{display:flex;justify-content:space-between;gap:24px;margin:25px 0 38px;color:var(--muted);font-size:.78rem}.outro p{max-width:750px}.status{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}noscript{display:block;background:var(--amber-bg);color:var(--amber);padding:20px}.demo-hint{color:var(--muted);font-size:.8rem;margin-top:15px}.static-tag{margin-top:14px}.completion-note{color:var(--muted);font-size:.77rem;margin-top:9px}
+    @media(max-width:850px){.grid-two{grid-template-columns:1fr}.workspace{padding:23px}.step{gap:7px;padding:11px 8px}.step span:last-child{font-size:.75rem}.score-layout{grid-template-columns:170px minmax(0,1fr);gap:21px}.outro{display:block}.outro a{display:inline-block;margin-top:10px}.panel-intro>.tag{display:none}}
+    @media(max-width:590px){.wrap{width:calc(100% - 28px)}header{min-height:76px}.identity{font-size:.8rem}.identity span{font-size:.65rem}.quiet-button{font-size:.75rem;padding:7px 9px}.hero{padding:32px 0 24px}.hero-copy{font-size:.94rem}.hero-meta{gap:10px 18px;font-size:.75rem}.disclosure{font-size:.75rem;padding:11px 12px}.steps{gap:4px;margin-bottom:14px}.step{flex-direction:column;padding:10px 2px;min-height:72px;gap:5px;justify-content:center}.step span:last-child{font-size:.61rem}.step-number{width:24px;height:24px}.workspace{padding:20px 16px;border-radius:14px}.panel-intro{margin-bottom:20px}.panel-intro p{font-size:.84rem}.document-paper{padding:18px}.document-paper h3{font-size:1.18rem}.document-paper p{font-size:.88rem}.card{padding:17px}.score-layout{grid-template-columns:1fr}.score-card{display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:19px;gap:0 15px}.score-value{font-size:3.4rem;grid-row:span 2}.score-card .tag{margin-top:9px}.score-card p{margin-top:0}.check-row{gap:9px}.check-row .tag{font-size:.61rem;padding:4px 6px}.check-row .check-title{font-size:.82rem}.check-row p{font-size:.74rem}.panel-footer{flex-wrap:wrap;margin-top:22px;padding-top:17px}.panel-footer .progress{width:100%}.footer-buttons{width:100%;justify-content:space-between}.footer-buttons button{font-size:.8rem}.decision-card{padding:18px}th,td{padding:11px 9px}table{font-size:.78rem;min-width:440px}.evidence{padding:14px}.evidence blockquote{font-size:.85rem}.outro{font-size:.72rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{header,.steps,.panel-footer,.header-actions,.evidence-button,.text-button,.validation-button,.human-check{display:none!important}.panel[hidden]{display:block!important}.panel{break-inside:avoid;margin-bottom:30px}.workspace{box-shadow:none;border:0;padding:0}.wrap{width:100%}.hero{padding-top:0}body{--bg:white;--panel:white;--panel-2:#f2f4f7;--text:#111;--muted:#444;--border:#bbb;--brand:#17468a;--amber:#80520a;--amber-bg:#fff2d5;color:#111;background:white;font-size:10pt}.outro{margin-bottom:0}.document-paper{min-height:0}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Aller à la démonstration</a>
+  <noscript>Cette démonstration interactive nécessite JavaScript. Le document initial et les explications restent consultables ci-dessous ; aucun service externe n'est nécessaire.</noscript>
+  <div class="wrap">
+    <header>
+      <a class="identity" href="../">Khayem Ben Ghorbel<span>Portfolio · IA &amp; développement</span></a>
+      <div class="header-actions">
+        <button class="quiet-button" id="reset" type="button">Recommencer</button>
+        <button class="quiet-button" id="theme" type="button" aria-label="Activer le thème clair" aria-pressed="false">Thème clair</button>
+      </div>
+    </header>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Projet de stage · One Tech · Été 2026</p>
+      <h1 id="page-title">De l'appel d'offres<br>à une décision expliquée.</h1>
+      <p class="hero-copy">Un parcours en cinq étapes pour montrer l'idée du projet : structurer un document, vérifier les exigences et préparer une décision Go / No-Go en laissant à l'humain la validation finale.</p>
+      <div class="hero-meta"><span><strong>60–90 secondes</strong> de parcours</span><span><strong>5 étapes</strong> traçables</span><span><strong>100 % hors ligne</strong></span></div>
+      <div class="disclosure" role="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg>
+        <p><strong>Démo pédagogique — toutes les données sont fictives.</strong> Les extraits, critères et analyses sont préparés à l'avance. Cette page n'exécute ni OCR ni modèle d'IA et ne reproduit pas le système interne de One Tech. Aucun fichier n'est envoyé.</p>
+      </div>
+    </section>
+    <main id="main" tabindex="-1">
+      <nav aria-label="Étapes de la démonstration">
+        <ol class="steps">
+          <li><button type="button" class="step" data-step="0" aria-current="step" aria-controls="panel-0"><span class="step-number">1</span><span>Document</span></button></li>
+          <li><button type="button" class="step" data-step="1" aria-controls="panel-1"><span class="step-number">2</span><span>Extraction</span></button></li>
+          <li><button type="button" class="step" data-step="2" aria-controls="panel-2"><span class="step-number">3</span><span>Exigences</span></button></li>
+          <li><button type="button" class="step" data-step="3" aria-controls="panel-3"><span class="step-number">4</span><span>Score</span></button></li>
+          <li><button type="button" class="step" data-step="4" aria-controls="panel-4"><span class="step-number">5</span><span>Validation</span></button></li>
+        </ol>
+      </nav>
+      <div class="workspace">
+        <section class="panel" id="panel-0" aria-labelledby="title-0">
+          <div class="panel-intro"><div><h2 id="title-0" tabindex="-1">01 · Lire le besoin.</h2><p>Un exemple de dossier simplifié. Parcourez ses quatre pages avant de retrouver les informations structurées.</p></div><span class="tag">Document fictif</span></div>
+          <div class="grid-two">
+            <div>
+              <div class="document" aria-label="Extrait du dossier fictif Atlas AO-2026-014">
+                <div class="document-bar"><span>Atlas · AO-2026-014</span><span id="page-label">Page 1 / 4</span></div>
+                <article class="document-paper" id="document-page" aria-live="polite"></article>
+                <nav class="document-pages" aria-label="Pages du document fictif"><span>Page</span><button class="page-button" type="button" data-page="0" aria-current="page" aria-label="Page 1">1</button><button class="page-button" type="button" data-page="1" aria-label="Page 2">2</button><button class="page-button" type="button" data-page="2" aria-label="Page 3">3</button><button class="page-button" type="button" data-page="3" aria-label="Page 4">4</button></nav>
+              </div>
+              <p class="source-note">Texte synthétique affiché comme document pour la démonstration. Aucun PDF réel ni fichier d'entreprise n'est utilisé.</p>
+            </div>
+            <aside class="card"><h3>La question métier</h3><p>La société fictive <strong>Nova Conseil</strong> doit-elle consacrer du temps à répondre à cet appel d'offres ?</p><ul><li>Comprendre le périmètre demandé.</li><li>Repérer les obligations et les informations absentes.</li><li>Relier chaque résultat à sa source.</li><li>Donner une recommandation vérifiable.</li></ul><p>Le projet de stage mobilisait Python, PostgreSQL, OCR, orchestration LLM, MCP et n8n.</p><div class="flow" aria-label="Parcours expliqué"><span>Document</span><b aria-hidden="true">→</b><span>Données</span><b aria-hidden="true">→</b><span>Décision</span></div><p class="static-tag"><span class="tag">Ici : parcours explicatif autonome</span></p></aside>
+          </div>
+        </section>
+        <section class="panel" id="panel-1" aria-labelledby="title-1" hidden>
+          <div class="panel-intro"><div><h2 id="title-1" tabindex="-1">02 · Extraire, avec les sources.</h2><p>Chaque champ renvoie à un extrait précis. Cliquez sur une source pour comprendre d'où vient l'information.</p></div><span class="tag">Extraction préétablie</span></div>
+          <div class="table-scroll"><table><caption class="status">Informations extraites du dossier fictif</caption><thead><tr><th scope="col">Champ</th><th scope="col">Valeur extraite</th><th scope="col">Source</th></tr></thead><tbody>
+            <tr><td>Objet</td><td>Portail de suivi documentaire</td><td><button type="button" class="evidence-button" data-evidence="0" aria-pressed="true" aria-controls="evidence">Page 1 ↗</button></td></tr>
+            <tr><td>Budget maximal</td><td>80 000 € HT</td><td><button type="button" class="evidence-button" data-evidence="1" aria-pressed="false" aria-controls="evidence">Page 2 ↗</button></td></tr>
+            <tr><td>Remise des offres</td><td>18 novembre 2026, à 12 h</td><td><button type="button" class="evidence-button" data-evidence="2" aria-pressed="false" aria-controls="evidence">Page 2 ↗</button></td></tr>
+            <tr><td>Compétences demandées</td><td>Python, PostgreSQL, API REST</td><td><button type="button" class="evidence-button" data-evidence="3" aria-pressed="false" aria-controls="evidence">Page 3 ↗</button></td></tr>
+            <tr><td>Pièce obligatoire</td><td>Attestation de sécurité à joindre</td><td><button type="button" class="evidence-button" data-evidence="4" aria-pressed="false" aria-controls="evidence">Page 4 ↗</button></td></tr>
+          </tbody></table></div>
+          <aside class="evidence" id="evidence" aria-live="polite"><h3 id="evidence-label"></h3><blockquote id="evidence-quote"></blockquote><button type="button" class="text-button" id="open-page">Consulter cette page du document</button></aside>
+          <p class="demo-hint">Dans un traitement réel, les erreurs d'OCR et d'extraction doivent être contrôlées. Ici, ces valeurs illustratives sont fournies à l'avance.</p>
+        </section>
+        <section class="panel" id="panel-2" aria-labelledby="title-2" hidden>
+          <div class="panel-intro"><div><h2 id="title-2" tabindex="-1">03 · Vérifier les exigences.</h2><p>On compare le besoin au profil fictif de Nova Conseil. Une pièce manquante reste une réserve, même avec un bon score.</p></div><span class="tag warn">1 réserve à lever</span></div>
+          <div class="grid-two"><div><ul class="checks">
+            <li class="check-row"><span class="check-mark" aria-hidden="true">✓</span><div><div class="check-title">Périmètre compatible</div><p>Le profil fictif couvre les portails documentaires.</p></div><span class="tag good">Conforme</span></li>
+            <li class="check-row"><span class="check-mark" aria-hidden="true">✓</span><div><div class="check-title">Compétences techniques</div><p>Python, PostgreSQL et API REST présents dans le profil.</p></div><span class="tag good">Conforme</span></li>
+            <li class="check-row"><span class="check-mark" aria-hidden="true">✓</span><div><div class="check-title">Capacité de l'équipe</div><p>Deux personnes disponibles pour quatre mois.</p></div><span class="tag good">Conforme</span></li>
+            <li class="check-row"><span class="check-mark" aria-hidden="true">✓</span><div><div class="check-title">Enveloppe estimée</div><p>Estimation fictive : 68 000 € HT, sous le plafond.</p></div><span class="tag good">Conforme</span></li>
+            <li class="check-row"><span class="check-mark pending" aria-hidden="true">?</span><div><div class="check-title">Attestation de sécurité</div><p>Demandée page 4 ; absente du profil de démonstration.</p></div><span class="tag warn">À vérifier</span></li>
+          </ul></div><aside class="card"><h3>Profil de comparaison fictif</h3><p><strong>Nova Conseil</strong> · équipe de services numériques inventée pour cet exemple.</p><ul><li>Références : gestion documentaire et API.</li><li>Stack : Python, PostgreSQL, REST.</li><li>Disponibilité : deux personnes, quatre mois.</li><li>Charge de préparation : délai jugé tendu.</li><li>Attestation : statut non renseigné.</li></ul><p>Ces critères sont conçus pour cette page ; ce ne sont pas les règles internes de One Tech.</p></aside></div>
+          <div class="notice"><strong>Une absence d'information n'est pas une conformité.</strong> La recommandation restera conditionnelle tant qu'un humain n'aura pas contrôlé la pièce obligatoire.</div>
+        </section>
+        <section class="panel" id="panel-3" aria-labelledby="title-3" hidden>
+          <div class="panel-intro"><div><h2 id="title-3" tabindex="-1">04 · Expliquer le score.</h2><p>Une pondération illustrative rend l'arbitrage lisible. Le score aide à prioriser ; il ne remplace pas les exigences obligatoires.</p></div><span class="tag">Règle de démo : seuil 75 / 100</span></div>
+          <div class="score-layout"><aside class="score-card"><div class="score-value">82<small> / 100</small></div><p>Score d'opportunité illustratif</p><span class="tag warn">Go sous réserve</span></aside><div>
+            <div class="score-row"><div class="score-label"><strong>Adéquation au métier</strong><span>90 / 100 · poids 35 %</span></div><div class="bar-track" role="meter" aria-label="Adéquation au métier" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"><div class="bar-fill" style="width:90%"></div></div><p class="score-description">Le périmètre correspond aux références fictives · contribution : 31,5 points.</p></div>
+            <div class="score-row"><div class="score-label"><strong>Maîtrise technique</strong><span>80 / 100 · poids 25 %</span></div><div class="bar-track" role="meter" aria-label="Maîtrise technique" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><div class="bar-fill" style="width:80%"></div></div><p class="score-description">Stack maîtrisée, intégration à préciser · contribution : 20 points.</p></div>
+            <div class="score-row"><div class="score-label"><strong>Capacité de livraison</strong><span>80 / 100 · poids 25 %</span></div><div class="bar-track" role="meter" aria-label="Capacité de livraison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><div class="bar-fill" style="width:80%"></div></div><p class="score-description">Ressources disponibles, marge limitée · contribution : 20 points.</p></div>
+            <div class="score-row"><div class="score-label"><strong>Délai de préparation</strong><span>70 / 100 · poids 15 %</span></div><div class="bar-track" role="meter" aria-label="Délai de préparation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><div class="bar-fill" style="width:70%"></div></div><p class="score-description">Planning tendu pour assembler les pièces · contribution : 10,5 points.</p></div>
+            <p class="calculation">(90 × 0,35) + (80 × 0,25) + (80 × 0,25) + (70 × 0,15) = <strong>82 / 100</strong>. Notes et poids préparés pour l'exemple, sans notation par une IA en direct.</p>
+          </div></div>
+          <div class="notice"><strong>Pourquoi pas un Go automatique ?</strong> Le score dépasse le seuil fictif de 75, mais l'attestation obligatoire n'a pas été vérifiée. Une exigence bloquante ne peut pas être compensée par la moyenne.</div>
+        </section>
+        <section class="panel" id="panel-4" aria-labelledby="title-4" hidden>
+          <div class="panel-intro"><div><h2 id="title-4" tabindex="-1">05 · Laisser l'humain décider.</h2><p>La recommandation est accompagnée de ses raisons et de ses réserves. Essayez une validation simulée en levant la réserve.</p></div><span class="tag">Décision simulée</span></div>
+          <div class="grid-two"><div class="decision-card"><div class="decision-label">Recommandation de l'exemple</div><div class="decision-title" id="decision-title">Go sous réserve</div><p id="decision-reason">Le score de 82 / 100 est favorable. Confirmer la présence et la conformité de l'attestation avant de décider de répondre.</p><label class="human-check"><input id="human-validation" type="checkbox"><span>Dans ce scénario fictif, je confirme avoir contrôlé l'attestation de sécurité et les extraits du dossier.</span></label><button type="button" class="primary validation-button" id="validate" disabled>Valider le Go simulé <span aria-hidden="true">→</span></button><p class="completion-note">Cette action reste dans la page : aucune offre, aucun message ni fichier n'est envoyé.</p><div class="confirmation" id="confirmation" role="status" hidden>Go simulé validé. La réserve est levée par une vérification humaine dans cet exemple.</div></div><aside class="card"><h3>Une synthèse exploitable</h3><div class="summary-list"><div><strong>Opportunité</strong><span>Atlas · AO-2026-014 · portail documentaire</span></div><div><strong>Pourquoi répondre ?</strong><span>Adéquation métier, stack et ressources disponibles.</span></div><div><strong>Point de vigilance</strong><span>Délai tendu ; attestation à contrôler.</span></div><div><strong>Traçabilité</strong><span>Champs reliés aux pages et citations sources.</span></div><div><strong>Dernière étape</strong><span>Décision et responsabilité humaines.</span></div></div></aside></div>
+          <p class="demo-hint">Ce parcours illustre l'objectif du projet de stage : passer d'informations dispersées à une aide à la décision vérifiable. Il ne constitue pas une mesure de performance du système réel.</p>
+        </section>
+        <div class="panel-footer"><div class="progress" id="progress">Étape 1 sur 5 · Document</div><div class="footer-buttons"><button class="quiet-button" id="previous" type="button" disabled>← Précédent</button><button class="primary" id="next" type="button">Voir l'extraction <span aria-hidden="true">→</span></button></div></div>
+      </div>
+    </main>
+    <footer class="outro"><p>Conception de cette démonstration : Khayem Ben Ghorbel · Projet de stage One Tech, été 2026.<br>Données synthétiques, analyse préparée et interface autonome. Aucun accès aux documents ou au code interne.</p><a href="../#projects">Retour aux projets ↗</a></footer>
+  </div>
+  <div class="status" id="announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script>
+    (() => {
+      'use strict';
+      const pages = [
+        { label:'Objet et périmètre', title:'Portail de suivi documentaire', text:'La structure fictive Atlas souhaite un portail de suivi documentaire pour centraliser ses dossiers, rechercher des documents et suivre leur état de validation.', extra:'Le présent dossier AO-2026-014 est entièrement fictif. Il sert uniquement à expliquer le parcours de démonstration.' },
+        { label:'Budget et calendrier', title:'Conditions de la consultation', text:'Le budget maximal est fixé à 80 000 € HT. La date limite de remise des offres est le 18 novembre 2026 à 12 h.', extra:'La durée prévisionnelle de réalisation est de quatre mois. Une proposition de planning détaillé doit accompagner la réponse.' },
+        { label:'Attendus techniques', title:'Une base technique structurée', text:'La solution attendue s’appuie sur Python, PostgreSQL et une API REST. Elle permet l’import, la consultation et la recherche de documents.', extra:'Le candidat décrit les choix d’architecture et prévoit des tests de validation, ainsi qu’une documentation de prise en main.' },
+        { label:'Pièces et obligations', title:'Vérifications avant candidature', text:'Une attestation de sécurité doit obligatoirement être jointe à l’offre. Le candidat précise les personnes mobilisées et leurs disponibilités.', extra:'Un dossier incomplet doit être signalé avant toute décision de candidature. Les documents de cet exemple sont inventés.' }
+      ];
+      const evidence = [
+        {page:0, label:'Objet · page 1', quote:'La structure fictive Atlas souhaite un portail de suivi documentaire pour centraliser ses dossiers, rechercher des documents et suivre leur état de validation.'},
+        {page:1, label:'Budget · page 2', quote:'Le budget maximal est fixé à 80 000 € HT.'},
+        {page:1, label:'Échéance · page 2', quote:'La date limite de remise des offres est le 18 novembre 2026 à 12 h.'},
+        {page:2, label:'Compétences · page 3', quote:'La solution attendue s’appuie sur Python, PostgreSQL et une API REST.'},
+        {page:3, label:'Pièce obligatoire · page 4', quote:'Une attestation de sécurité doit obligatoirement être jointe à l’offre.'}
+      ];
+      const names=['Document','Extraction','Exigences','Score','Validation'];
+      const nextNames=['Voir l’extraction','Vérifier les exigences','Comprendre le score','Voir la décision','Recommencer le parcours'];
+      const $ = id => document.getElementById(id);
+      let activeStep=0, activeEvidence=0;
+      const visited = new Set([0]);
+      function renderPage(index){
+        const page=pages[index];
+        const target=$('document-page');
+        target.replaceChildren();
+        [['p',page.label,'doc-kicker'],['h3',page.title,''],['p',page.text,''],['p',page.extra,'']].forEach(([tag,text,cls])=>{const el=document.createElement(tag);el.textContent=text;if(cls)el.className=cls;target.appendChild(el);});
+        $('page-label').textContent=`Page ${index+1} / 4`;
+        document.querySelectorAll('[data-page]').forEach(button=>{if(Number(button.dataset.page)===index)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');});
+      }
+      function selectEvidence(index){
+        activeEvidence=index;
+        const item=evidence[index];
+        $('evidence-label').textContent=`Extrait source · ${item.label}`;
+        $('evidence-quote').textContent=`« ${item.quote} »`;
+        document.querySelectorAll('[data-evidence]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.evidence)===index)));
+      }
+      function setStep(index,focus=true){
+        activeStep=index;visited.add(index);
+        document.querySelectorAll('.panel').forEach((panel,i)=>panel.hidden=i!==index);
+        document.querySelectorAll('[data-step]').forEach(button=>{
+          const i=Number(button.dataset.step);
+          if(i===index)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');
+          button.classList.toggle('is-complete',visited.has(i)&&i!==index);
+        });
+        $('progress').textContent=`Étape ${index+1} sur 5 · ${names[index]}`;
+        $('previous').disabled=index===0;
+        $('next').replaceChildren(document.createTextNode(nextNames[index]+' '));
+        const arrow=document.createElement('span');arrow.setAttribute('aria-hidden','true');arrow.textContent=index===4?'↻':'→';$('next').appendChild(arrow);
+        if(focus){$('title-'+index).focus({preventScroll:true});$('main').scrollIntoView({block:'start'});}
+        $('announcer').textContent=`Étape ${index+1} sur 5 : ${names[index]}`;
+      }
+      function reset(){
+        visited.clear();visited.add(0);$('human-validation').checked=false;$('validate').disabled=true;$('confirmation').hidden=true;
+        $('decision-title').textContent='Go sous réserve';$('decision-title').classList.remove('approved');
+        $('decision-reason').textContent='Le score de 82 / 100 est favorable. Confirmer la présence et la conformité de l’attestation avant de décider de répondre.';
+        $('validate').textContent='Valider le Go simulé →';renderPage(0);selectEvidence(0);setStep(0);
+        $('announcer').textContent='Démonstration réinitialisée. Étape 1 sur 5 : Document.';
+      }
+      document.querySelectorAll('[data-step]').forEach(button=>button.addEventListener('click',()=>setStep(Number(button.dataset.step))));
+      document.querySelectorAll('[data-page]').forEach(button=>button.addEventListener('click',()=>renderPage(Number(button.dataset.page))));
+      document.querySelectorAll('[data-evidence]').forEach(button=>button.addEventListener('click',()=>selectEvidence(Number(button.dataset.evidence))));
+      $('open-page').addEventListener('click',()=>{renderPage(evidence[activeEvidence].page);setStep(0);$('announcer').textContent=`Document source : page ${evidence[activeEvidence].page+1}. Pour revenir, activez l’étape Extraction.`;});
+      $('previous').addEventListener('click',()=>{if(activeStep>0)setStep(activeStep-1);});
+      $('next').addEventListener('click',()=>{if(activeStep===4)reset();else setStep(activeStep+1);});
+      $('reset').addEventListener('click',reset);
+      $('human-validation').addEventListener('change',()=>{
+        const checked=$('human-validation').checked;
+        $('validate').disabled=!checked;
+        if(!checked){$('confirmation').hidden=true;$('decision-title').textContent='Go sous réserve';$('decision-title').classList.remove('approved');$('decision-reason').textContent='Le score de 82 / 100 est favorable. Confirmer la présence et la conformité de l’attestation avant de décider de répondre.';$('validate').textContent='Valider le Go simulé →';}
+      });
+      $('validate').addEventListener('click',()=>{
+        if(!$('human-validation').checked)return;
+        $('decision-title').textContent='Go validé · simulation';$('decision-title').classList.add('approved');
+        $('decision-reason').textContent='Dans ce scénario, l’humain a contrôlé les sources et levé la réserve. La décision de répondre est confirmée uniquement dans cette démonstration.';
+        $('confirmation').hidden=false;$('validate').disabled=true;$('validate').textContent='Validation simulée terminée ✓';
+      });
+      function applyTheme(theme){
+        document.documentElement.dataset.theme=theme;
+        const dark=theme==='dark';$('theme').textContent=dark?'Thème clair':'Thème sombre';$('theme').setAttribute('aria-label',dark?'Activer le thème clair':'Activer le thème sombre');$('theme').setAttribute('aria-pressed',String(!dark));
+        document.querySelector('meta[name="theme-color"]').content=dark?'#0b1220':'#f4f7fc';
+      }
+      let initialTheme='dark';
+      try{const saved=localStorage.getItem('stage-demo-theme');initialTheme=saved==='light'||saved==='dark'?saved:(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');}catch(error){initialTheme=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+      applyTheme(initialTheme);
+      $('theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';applyTheme(theme);try{localStorage.setItem('stage-demo-theme',theme);}catch(error){/* Theme also works when local storage is unavailable. */}});
+      renderPage(0);selectEvidence(0);setStep(0,false);
+    })();
+  </script>
+</body>
+</html>
