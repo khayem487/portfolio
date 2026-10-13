@@ -98,7 +98,7 @@ const greeting = {
       "Mobilité : France · Basé à Cergy"
     ]
   },
-  resumeLink: `${process.env.PUBLIC_URL}/CV_Khayem_General_Informatique.pdf`,
+  resumeLink: `${process.env.PUBLIC_URL}/CV_Khayem_General_Informatique.pdf?v=864123f4`,
   portfolio_repository: "https://github.com/khayem487/portfolio",
   githubProfile: "https://github.com/khayem487",
   displayGreeting: true
@@ -498,7 +498,7 @@ const podcastSection = {
 const resumeSection = {
   title: "Resume",
   subtitle: "Download my latest resume.",
-  downloadLink: `${process.env.PUBLIC_URL}/CV_Khayem_General_Informatique.pdf`,
+  downloadLink: `${process.env.PUBLIC_URL}/CV_Khayem_General_Informatique.pdf?v=864123f4`,
   display: false
 };
 
