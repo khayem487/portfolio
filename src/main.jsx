@@ -1,9 +1,9 @@
-import React, { useEffect, useState, Suspense, lazy } from "react";
+import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
+import { projects } from "./data/projects.js";
 import "./styles.css";
 
-const DemoLab = lazy(() => import("./DemoLab.jsx"));
 function PortfolioRoot() {
   const [hash, setHash] = useState(() => location.hash);
   useEffect(() => {
@@ -12,23 +12,17 @@ function PortfolioRoot() {
     return () => window.removeEventListener("hashchange", sync);
   }, []);
   useEffect(() => {
-    if (hash.startsWith("#demo/"))
-      window.scrollTo({ top: 0, behavior: "instant" });
-    else if (!hash.startsWith("#project/"))
+    const legacyDemo = hash.match(/^#demo\/([^/]+)$/);
+    if (legacyDemo) {
+      const project = projects.find((item) => item.id === decodeURIComponent(legacyDemo[1]));
+      if (project?.demo) window.location.replace(project.demo.url);
+      else window.location.replace(project ? `#project/${project.id}` : "#projects");
+    } else if (!hash.startsWith("#project/"))
       document
         .getElementById(hash.slice(1))
         ?.scrollIntoView({ behavior: "instant" });
   }, [hash]);
-  const match = hash.match(/^#demo\/([^/]+)$/);
-  return match ? (
-    <Suspense
-      fallback={<p className="lab-loading">Chargement de l’atelier…</p>}
-    >
-      <DemoLab id={decodeURIComponent(match[1])} />
-    </Suspense>
-  ) : (
-    <App />
-  );
+  return <App />;
 }
 
 createRoot(document.getElementById("root")).render(

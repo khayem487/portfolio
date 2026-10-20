@@ -239,11 +239,12 @@ export const projects = [
   }
 ];
 
-// Every public project has a browser workspace. Keep server applications available separately.
+// Demo buttons open the actual hosted applications. Unhosted projects keep their source/details.
 for (const project of projects) {
-  project.originalDemo = project.demo;
-  project.demo = {url: `#demo/${project.id}`, label: {fr: "Ouvrir l’atelier", en: "Open workspace"}, kind: "interactive"};
-  project.status = "interactive";
+  if (project.demo?.kind !== "live") {
+    project.demo = null;
+    project.status = "case-study";
+  }
 }
 
 export const profile = {
