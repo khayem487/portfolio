@@ -429,12 +429,13 @@ function Achievements({ lang, onOpen }) {
 }
 
 function ExternalLink({ href, children, className = "", label, ...props }) {
+  const internal = href.startsWith("#");
   return (
     <a
       href={asset(href)}
       className={className}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={internal ? undefined : "_blank"}
+      rel={internal ? undefined : "noopener noreferrer"}
       aria-label={label}
       {...props}
     >
