@@ -15,6 +15,8 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     @media print{header,.steps,.panel-footer,.header-actions,.evidence-button,.text-button,.validation-button,.human-check{display:none!important}.panel[hidden]{display:block!important}.panel{break-inside:avoid;margin-bottom:30px}.workspace{box-shadow:none;border:0;padding:0}.wrap{width:100%}.hero{padding-top:0}body{--bg:white;--panel:white;--panel-2:#f2f4f7;--text:#111;--muted:#444;--border:#bbb;--brand:#17468a;--amber:#80520a;--amber-bg:#fff2d5;color:#111;background:white;font-size:10pt}.outro{margin-bottom:0}.document-paper{min-height:0}}
   </style>
+  <link rel="stylesheet" href="../demo-theme.css">
+  <script src="../demo-theme.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Aller à la démonstration</a>
@@ -27,16 +29,8 @@
         <button class="quiet-button" id="theme" type="button" aria-label="Activer le thème clair" aria-pressed="false">Thème clair</button>
       </div>
     </header>
-    <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">Projet de stage · One Tech · Été 2026</p>
-      <h1 id="page-title">De l'appel d'offres<br>à une décision expliquée.</h1>
-      <p class="hero-copy">Un parcours en cinq étapes pour montrer l'idée du projet : structurer un document, vérifier les exigences et préparer une décision Go / No-Go en laissant à l'humain la validation finale.</p>
-      <div class="hero-meta"><span><strong>60–90 secondes</strong> de parcours</span><span><strong>5 étapes</strong> traçables</span><span><strong>100 % hors ligne</strong></span></div>
-      <div class="disclosure" role="note">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg>
-        <p><strong>Démo pédagogique — toutes les données sont fictives.</strong> Les extraits, critères et analyses sont préparés à l'avance. Cette page n'exécute ni OCR ni modèle d'IA et ne reproduit pas le système interne de One Tech. Aucun fichier n'est envoyé.</p>
-      </div>
-    </section>
+    <h1 class="visually-hidden" id="page-title">OneTech · Analyse d’un appel d’offres</h1>
+    <p class="demo-brief">Parcours pédagogique · données fictives et extraction préétablie · aucun modèle IA exécuté.</p>
     <main id="main" tabindex="-1">
       <nav aria-label="Étapes de la démonstration">
         <ol class="steps">
@@ -186,12 +180,12 @@
       function applyTheme(theme){
         document.documentElement.dataset.theme=theme;
         const dark=theme==='dark';$('theme').textContent=dark?'Thème clair':'Thème sombre';$('theme').setAttribute('aria-label',dark?'Activer le thème clair':'Activer le thème sombre');$('theme').setAttribute('aria-pressed',String(!dark));
-        document.querySelector('meta[name="theme-color"]').content=dark?'#0b1220':'#f4f7fc';
+        document.querySelector('meta[name="theme-color"]').content=dark?'#101827':'#f8f9fb';
       }
       let initialTheme='dark';
-      try{const saved=localStorage.getItem('stage-demo-theme');initialTheme=saved==='light'||saved==='dark'?saved:(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');}catch(error){initialTheme=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+      try{const saved=new URLSearchParams(location.search).get('theme')||localStorage.getItem('portfolio-theme');initialTheme=saved==='light'||saved==='dark'?saved:(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');}catch(error){initialTheme=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
       applyTheme(initialTheme);
-      $('theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';applyTheme(theme);try{localStorage.setItem('stage-demo-theme',theme);}catch(error){/* Theme also works when local storage is unavailable. */}});
+      $('theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';applyTheme(theme);try{localStorage.setItem('portfolio-theme',theme);}catch(error){/* Theme also works when local storage is unavailable. */}});
       renderPage(0);selectEvidence(0);setStep(0,false);
     })();
   </script>
