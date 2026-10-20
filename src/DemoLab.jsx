@@ -12,7 +12,6 @@ import {
   FanReplayDemo,
   PluginsDemo,
   WatchPartyDemo,
-  SteamDemo,
 } from "./demos/tools.jsx";
 import { AslDemo, AttendanceDemo, ExchangeDemo } from "./demos/core.jsx";
 import "./lab.css";
@@ -39,7 +38,6 @@ const modules = {
   "adaptive-fan-control": FanReplayDemo,
   "vencord-plugins": PluginsDemo,
   "watch-party": WatchPartyDemo,
-  "steam-recommendations": SteamDemo,
   "exchange-matcher": ExchangeDemo,
 };
 

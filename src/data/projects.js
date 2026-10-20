@@ -110,24 +110,6 @@ export const projects = [
     note: { fr: "La démo utilise une base H2 en mémoire : ses données peuvent être réinitialisées. Le service gratuit peut nécessiter un réveil.", en: "The demo uses an in-memory H2 database, so its data may reset. The free service may need time to wake up." }
   },
   {
-    id: "steam-recommendations",
-    category: "data",
-    featured: false,
-    year: "",
-    status: "case-study",
-    title: { fr: "Recommandations de jeux Steam", en: "Steam game recommendations" },
-    summary: { fr: "Explorer un catalogue de jeux et préparer des recommandations à partir d’un profil Steam.", en: "Exploring a game catalogue and preparing recommendations from a Steam profile." },
-    role: { fr: "Projet personnel · recommandation", en: "Personal project · recommendation systems" },
-    context: { fr: "Un système de recommandation qui associe des données de jeux, des artefacts de modèle et une interface pour découvrir des titres. L’API et l’interface sont séparées.", en: "A recommendation system combining game data, model artefacts and an interface for discovering titles. The API and user interface are separate services." },
-    work: { fr: ["Préparation des données et des représentations de jeux avec Pandas et scikit-learn.", "API FastAPI pour les profils et les recommandations ; interface Streamlit.", "Configuration de services Docker et intégration de l’authentification Steam."], en: ["Data preparation and game representations with Pandas and scikit-learn.", "FastAPI service for profiles and recommendations, with a Streamlit interface.", "Docker service configuration and Steam authentication integration."] },
-    outcomes: { fr: ["Des artefacts de modèle réutilisables et une architecture API/interface découplée.", "Une base pour comparer pertinence et diversité dans les recommandations."], en: ["Reusable model artefacts and a decoupled API/interface architecture.", "A foundation for comparing relevance and diversity in recommendations."] },
-    tech: ["Python", "FastAPI", "Streamlit", "scikit-learn", "Pandas", "Docker"],
-    codeUrl: null,
-    demo: null,
-    art: "project-art/steam.svg",
-    note: { fr: "Code privé. Cette présentation ne publie ni données de profil ni artefacts du dépôt.", en: "Private source code. This overview does not publish profile data or repository artefacts." }
-  },
-  {
     id: "healthradar",
     category: "data",
     featured: false,

@@ -6,7 +6,7 @@
 Élève ingénieur à **CY Tech** — des projets à explorer, du code à lire, des idées à tester.
 
 [![Portfolio](https://img.shields.io/badge/PORTFOLIO-Visiter_le_site-294de8?style=for-the-badge)](https://khayem-ben-ghorbel.vercel.app/)
-[![Ateliers](https://img.shields.io/badge/DÉMOS-14_ateliers-12827b?style=for-the-badge)](https://khayem-ben-ghorbel.vercel.app/#projects)
+[![Ateliers](https://img.shields.io/badge/DÉMOS-13_ateliers-12827b?style=for-the-badge)](https://khayem-ben-ghorbel.vercel.app/#projects)
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-Échanger-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/khayem-bg/)
 
 **Stage de 4–6 mois dès mars 2027** · **Contrat de professionnalisation de 12 mois dès septembre 2027**
@@ -17,7 +17,7 @@
 
 ## Explorer les projets
 
-**14 projets**, leurs technologies, leur contexte, les liens vers le code et un atelier interactif pour chacun. Français / anglais, thèmes clair / sombre, recherche et fiches détaillées.
+**13 projets**, leurs technologies, leur contexte, les liens vers le code et un atelier interactif pour chacun. Français / anglais, thèmes clair / sombre, recherche et fiches détaillées.
 
 | Projet | À essayer |
 | --- | --- |
@@ -28,7 +28,7 @@
 | **Loc Auto** | [Parcourir le catalogue et réserver](https://khayem-ben-ghorbel.vercel.app/#demo/car-rental) |
 | **Exchange Matcher** | [Comprendre l’affectation par préférences](https://khayem-ben-ghorbel.vercel.app/#demo/exchange-matcher) |
 
-Les autres ateliers couvrent le pointage, HealthRadar, un jeu Java adapté au navigateur, les alertes CROUS, une relecture de données thermiques, des outils texte/PDF, la synchronisation vidéo et les recommandations de jeux.
+Les autres ateliers couvrent le pointage, HealthRadar, un jeu Java adapté au navigateur, les alertes CROUS, une relecture de données thermiques, des outils texte/PDF, la synchronisation vidéo.
 
 <details>
 <summary><strong>Deux aperçus des interfaces</strong></summary>
@@ -96,7 +96,7 @@ npx vercel deploy --prebuilt --prod
 
 ## Vérifications
 
-20 octobre 2026 : compilation de production, agrégats du dashboard, intégrité du CV, chargement des 14 ateliers et une interaction représentative par atelier contrôlés. Les adaptations ASL et pointage n’attestent pas du fonctionnement des modèles caméra. Les applications Render n’ont pas fait l’objet d’un nouvel audit fonctionnel.
+20 octobre 2026 : compilation de production, agrégats du dashboard, intégrité du CV, chargement des 13 ateliers et une interaction représentative par atelier contrôlés. Les adaptations ASL et pointage n’attestent pas du fonctionnement des modèles caméra. Les applications Render n’ont pas fait l’objet d’un nouvel audit fonctionnel.
 
 ---
 
