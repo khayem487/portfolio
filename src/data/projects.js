@@ -33,9 +33,9 @@ export const projects = [
     outcomes: { fr: ["2e place obtenue au hackathon IA organisé par IEEE Computer Society.", "Une démo web et des scripts pour reproduire l’entraînement à partir du jeu de données ASL Alphabet."], en: ["Awarded 2nd place at the AI hackathon organised by IEEE Computer Society.", "A web demo and scripts to reproduce training from the ASL Alphabet dataset."] },
     tech: ["Python", "MediaPipe", "OpenCV", "scikit-learn", "Flask"],
     codeUrl: "https://github.com/khayem487/asl-recognition",
-    demo: { url: "https://asl-recognition-demo.onrender.com", label: { fr: "Essayer la démo", en: "Try the demo" }, kind: "live" },
+    demo: { url: "https://khayem-asl.vercel.app", label: { fr: "Essayer la démo", en: "Try the demo" }, kind: "live" },
     art: "project-art/asl.svg",
-    note: { fr: "L’application indique son mode : prédiction du modèle si disponible, sinon détection simplifiée de présence d’une main. Le service gratuit peut nécessiter un réveil.", en: "The app reports its mode: model prediction when available, otherwise simplified hand-presence detection. The free service may need time to wake up." }
+    note: { fr: "La démo exécute MediaPipe et le modèle entraîné sur le serveur. Le premier accès peut nécessiter quelques secondes de démarrage.", en: "The demo runs MediaPipe and the trained model on the server. The first visit may take a few seconds to start." }
   },
   {
     id: "data-dashboard",
@@ -69,9 +69,9 @@ export const projects = [
     outcomes: { fr: ["Un parcours complet, de l’enregistrement au suivi des pointages récents.", "Une version cloud légère et un mode local complet avec la bibliothèque face_recognition."], en: ["A complete workflow from registration to recent attendance records.", "A lightweight cloud version and a full local mode using the face_recognition library."] },
     tech: ["Python", "OpenCV", "Flask", "NumPy", "face_recognition"],
     codeUrl: "https://github.com/khayem487/Facial-Recognition-Attendance",
-    demo: { url: "https://facial-attendance-demo.onrender.com", label: { fr: "Essayer la démo", en: "Try the demo" }, kind: "live" },
+    demo: { url: "https://khayem-facial-attendance.vercel.app", label: { fr: "Essayer la démo", en: "Try the demo" }, kind: "live" },
     art: "project-art/attendance.svg",
-    note: { fr: "La démo cloud utilise une reconnaissance simplifiée OpenCV et un journal CSV ; elle ne reproduit pas le mode local complet. Le service gratuit peut nécessiter un réveil.", en: "The cloud demo uses simplified OpenCV matching and CSV records; it does not reproduce the full local mode. The free service may need time to wake up." }
+    note: { fr: "La démo cloud conserve le mode simplifié OpenCV avec inscription et journal persistants. Le mode local complet utilise face_recognition.", en: "The cloud demo retains simplified OpenCV matching with persistent registration and attendance records. The full local mode uses face_recognition." }
   },
   {
     id: "smart-home",
@@ -105,9 +105,9 @@ export const projects = [
     outcomes: { fr: ["Un parcours de réservation relié aux données de véhicule et de client.", "Une version de démonstration accessible depuis le navigateur."], en: ["A booking workflow connected to vehicle and customer data.", "A demonstration version accessible from a browser."] },
     tech: ["Java", "Spring Boot", "Thymeleaf", "JDBC", "Oracle", "H2"],
     codeUrl: "https://github.com/khayem487/car-rental-client",
-    demo: { url: "https://car-rental-client-demo.onrender.com", label: { fr: "Essayer la démo", en: "Try the demo" }, kind: "live" },
+    demo: { url: "https://khayem-car-rental.vercel.app", label: { fr: "Essayer la démo", en: "Try the demo" }, kind: "live" },
     art: "project-art/rental.svg",
-    note: { fr: "La démo utilise une base H2 en mémoire : ses données peuvent être réinitialisées. Le service gratuit peut nécessiter un réveil.", en: "The demo uses an in-memory H2 database, so its data may reset. The free service may need time to wake up." }
+    note: { fr: "La démo utilise une base H2 en mémoire : ses données peuvent être réinitialisées. Le premier accès peut nécessiter quelques secondes de démarrage.", en: "The demo uses an in-memory H2 database, so its data may reset. The first visit may take a few seconds to start." }
   },
   {
     id: "healthradar",

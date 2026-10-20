@@ -222,6 +222,18 @@ const readSetting = (key, fallback) => {
 };
 
 const proofMedia = {
+  "asl-recognition": {
+    src: "demo-previews/asl.png",
+    caption: { fr: "Interface de l’application Flask de reconnaissance ASL.", en: "Interface of the Flask ASL recognition application." },
+  },
+  "facial-attendance": {
+    src: "demo-previews/facial.png",
+    caption: { fr: "Interface de l’application Flask de pointage facial.", en: "Interface of the Flask facial attendance application." },
+  },
+  "car-rental": {
+    src: "demo-previews/rental.png",
+    caption: { fr: "Interface de l’application Spring Boot de location.", en: "Interface of the Spring Boot rental application." },
+  },
   "onetech-tender-agent": {
     src: "project-media/tender-walkthrough.png",
     caption: {

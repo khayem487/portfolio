@@ -21,9 +21,9 @@
 
 | Application | Démo en ligne | Code |
 | --- | --- | --- |
-| **Reconnaissance ASL** | [Webcam et prédiction](https://asl-recognition-demo.onrender.com) | [Python / MediaPipe / scikit-learn](https://github.com/khayem487/asl-recognition) |
-| **Pointage facial** | [Inscription et pointage](https://facial-attendance-demo.onrender.com) | [Python / Flask / OpenCV](https://github.com/khayem487/Facial-Recognition-Attendance) |
-| **Loc Auto** | [Catalogue et réservation](https://car-rental-client-demo.onrender.com) | [Java / Spring Boot / Thymeleaf](https://github.com/khayem487/car-rental-client) |
+| **Reconnaissance ASL** | [Webcam et prédiction](https://khayem-asl.vercel.app) | [Python / MediaPipe / scikit-learn](https://github.com/khayem487/asl-recognition) |
+| **Pointage facial** | [Inscription et pointage](https://khayem-facial-attendance.vercel.app) | [Python / Flask / OpenCV](https://github.com/khayem487/Facial-Recognition-Attendance) |
+| **Loc Auto** | [Catalogue et réservation](https://khayem-car-rental.vercel.app) | [Java / Spring Boot / Thymeleaf](https://github.com/khayem487/car-rental-client) |
 
 Les autres projets sont présentés dans leurs fiches avec le code disponible. Un projet sans application déployée ne propose pas de faux bouton de démonstration. Exchange Matcher est une participation au projet collectif dont le dépôt est maintenu par [basstreche9](https://github.com/basstreche9).
 
