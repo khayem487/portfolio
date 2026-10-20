@@ -75,7 +75,7 @@ node scripts/prepare-vercel.mjs
 npx vercel deploy --prebuilt --prod
 ```
 
-`.vercel/` et `.env*` sont exclus du dépôt. GitHub Pages construit la même interface avec le préfixe `/portfolio/`. Le workflow de disponibilité des applications Render est conservé séparément.
+`.vercel/` et `.env*` sont exclus du dépôt. GitHub Pages construit la même interface avec le préfixe `/portfolio/`. Le contrôle des anciens sites Render reste déclenchable manuellement ; les pings planifiés ont été retirés après la migration Vercel.
 
 ## Vérifications
 
