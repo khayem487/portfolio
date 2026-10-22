@@ -24,6 +24,8 @@ jobs:
       - run: npm ci
       - run: node public/demos/data-dashboard/verify_data.cjs
       - run: npm run build:pages
+      # Keep the generated Pages branch from triggering a second Vercel build.
+      - run: cp vercel.json dist/vercel.json
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages

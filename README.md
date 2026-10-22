@@ -26,6 +26,9 @@
 | **Loc Auto** | [Catalogue et réservation](https://khayem-car-rental.vercel.app) | [Java / Spring Boot / Thymeleaf](https://github.com/khayem487/car-rental-client) |
 | **Dashboard Data Achats** | [Indicateurs et graphiques](https://khayem-data-dashboard.vercel.app) | [Python / Flask / Pandas](https://github.com/khayem487/data-dashboard) |
 | **Exchange Matcher** | [Préférences et matching](https://khayem-exchange-matcher.vercel.app) | [JavaScript / Gale-Shapley](https://github.com/basstreche9/exchange-matcher) |
+| **Maison Intelligente** | [Pièces, objets et scénarios](https://khayem-smart-home.vercel.app) | [Java / Spring Boot / React](https://github.com/khayem487/Dev-Web-ING-1-S2-public) |
+| **OOP Game** | [Jouer aux trois mondes](https://khayem-oop-game.vercel.app) | [Moteur Java original / interface web](https://github.com/khayem487/oop-game-java) |
+| **HealthRadar** | [Grille et courbes de simulation](https://khayem-healthradar.vercel.app) | [Moteur Java original / Canvas](https://github.com/khayem487/Sim_cell) |
 
 Les autres projets sont présentés dans leurs fiches avec le code disponible. Un projet sans application déployée ne propose pas de faux bouton de démonstration. Exchange Matcher est un projet personnel initialement publié sous le pseudonyme [basstreche9](https://github.com/basstreche9), avec des candidats fictifs et sans connexion active à l’ENT.
 
@@ -46,6 +49,15 @@ Les autres projets sont présentés dans leurs fiches avec le code disponible. U
 
 ### Exchange Matcher
 ![Application Exchange Matcher](public/demo-previews/exchange.png)
+
+### Maison Intelligente
+![React et véritable backend Spring Boot](public/demo-previews/smart-home.png)
+
+### OOP Game
+![Jeu web avec le moteur Java du projet](public/demo-previews/oop-game.png)
+
+### HealthRadar
+![Simulation et statistiques calculées par Java](public/demo-previews/healthradar.png)
 
 Captures des interfaces des applications. Les illustrations SVG des autres cartes sont conceptuelles.
 
@@ -77,6 +89,8 @@ Le CV fourni est conservé sans modification : SHA-256 `864123f4d6e60d0084378d6c
 
 Projet Vercel : **khayem-ben-ghorbel**, relié à ce dépôt. Un push sur `master` déclenche le déploiement de production ; les autres branches produisent un aperçu. GitHub Pages est également construit par GitHub Actions.
 
+Les deux branches distantes ont un rôle distinct : `master` contient les sources ; `gh-pages` contient les fichiers générés pour GitHub Pages. Cette dernière est exclue des builds Vercel pour éviter un déploiement inutile sans sources.
+
 Pour une publication manuelle depuis le compte propriétaire :
 
 ```sh
@@ -90,7 +104,9 @@ npx vercel deploy --prebuilt --prod
 
 ## Vérifications
 
-22 octobre 2026 : compilation de production, intégrité du CV et liens directs des cinq applications contrôlés. Dashboard Data utilise ses véritables API Flask/Pandas ; Exchange Matcher exécute le matching avec les seuls vœux sélectionnés dans le navigateur. Les anciennes URLs internes de démo renvoient vers le vrai site pour les projets hébergés, et vers la fiche pour les autres projets.
+22 octobre 2026 : compilation de production, intégrité du CV et liens directs des huit applications contrôlés. Dashboard Data utilise ses API Flask/Pandas ; Exchange Matcher respecte les seuls vœux sélectionnés. Loc Auto V2 a été testé jusqu’au retour du véhicule, la maison utilise ses vrais contrôleurs Java, OOP Game ses classes Player/Level et HealthRadar ses six classes de modèle inchangées. Les anciennes URLs internes de démo renvoient vers le vrai site pour les projets hébergés, et vers la fiche pour les autres projets.
+
+Les données de Loc Auto et de la maison restent temporaires. Les parties du jeu et les paramètres HealthRadar sont mémorisés dans le navigateur et recalculés par Java ; ce n’est pas un compte synchronisé entre appareils. Watch Party attend son stockage partagé, et le contrôle CROUS reste en revue tant que sa source ne permet pas un résultat utile.
 
 ---
 

@@ -78,7 +78,7 @@ export const projects = [
     category: "web",
     featured: false,
     year: "",
-    status: "case-study",
+    status: "live",
     title: { fr: "Maison Intelligente", en: "Smart Home" },
     summary: { fr: "Une maison connectée à administrer : pièces, équipements, scénarios et droits d’accès.", en: "A connected home to manage: rooms, devices, automation scenarios and access levels." },
     role: { fr: "Projet académique full-stack", en: "Full-stack academic project" },
@@ -87,9 +87,9 @@ export const projects = [
     outcomes: { fr: ["Un ensemble cohérent de modules : information, visualisation, gestion et administration.", "Des configurations séparées pour une démonstration simple et une base MySQL."], en: ["A coherent set of information, visualisation, management and administration modules.", "Separate configurations for a simple demonstration and a MySQL database."] },
     tech: ["Java 21", "Spring Boot", "React", "JPA", "MySQL", "H2"],
     codeUrl: "https://github.com/khayem487/Dev-Web-ING-1-S2-public",
-    demo: null,
+    demo: { url: "https://khayem-smart-home.vercel.app", label: { fr: "Explorer la maison", en: "Explore the home" }, kind: "live" },
     art: "project-art/smart-home.svg",
-    note: null
+    note: { fr: "La démo utilise le vrai backend Java et des objets logiciels fictifs. Les données sont temporaires, les comptes partagés sont protégés et les scénarios se lancent manuellement.", en: "The demo uses the actual Java backend and fictional software devices. Data is temporary, shared accounts are protected, and scenarios run manually." }
   },
   {
     id: "car-rental",
@@ -102,7 +102,7 @@ export const projects = [
     role: { fr: "Développement web Java", en: "Java web development" },
     context: { fr: "Une application de location reliant un catalogue de véhicules, des réservations et la gestion des clients. Le projet associe des pages serveur à une base relationnelle.", en: "A rental application connecting a vehicle catalogue, bookings and customer management. The project combines server-rendered pages with a relational database." },
     work: { fr: ["Backend Java avec Spring Boot et accès aux données via JDBC.", "Pages Thymeleaf pour la navigation dans le catalogue et les parcours client.", "Connexion Oracle dans le projet original et profil H2 pour la démonstration."], en: ["Java backend with Spring Boot and JDBC data access.", "Thymeleaf pages for catalogue browsing and customer workflows.", "Oracle connection in the original project and an H2 demonstration profile."] },
-    outcomes: { fr: ["Un parcours de réservation relié aux données de véhicule et de client.", "Une version de démonstration accessible depuis le navigateur."], en: ["A booking workflow connected to vehicle and customer data.", "A demonstration version accessible from a browser."] },
+    outcomes: { fr: ["Catalogue public, filtres combinés et parcours de réservation avec montant calculé côté serveur.", "Compte visiteur fictif isolé, historique, retour du véhicule et réservation concurrente protégée."], en: ["Public catalogue, combined filters and booking with server-calculated pricing.", "An isolated fictional visitor account, history, vehicle return and protected concurrent booking."] },
     tech: ["Java", "Spring Boot", "Thymeleaf", "JDBC", "Oracle", "H2"],
     codeUrl: "https://github.com/khayem487/car-rental-client",
     demo: { url: "https://khayem-car-rental.vercel.app", label: { fr: "Essayer la démo", en: "Try the demo" }, kind: "live" },
@@ -114,18 +114,18 @@ export const projects = [
     category: "data",
     featured: false,
     year: "",
-    status: "case-study",
+    status: "live",
     title: { fr: "HealthRadar", en: "HealthRadar" },
     summary: { fr: "Explorer une propagation épidémique sur une grille, avec des paramètres et des zones urbaines modifiables.", en: "Exploring disease propagation on a grid with adjustable parameters and urban zones." },
     role: { fr: "Projet académique collectif · Java/JavaFX", en: "Team academic project · Java/JavaFX" },
     context: { fr: "Dans le cadre d’un projet de programmation à cellules 2D, HealthRadar simule des individus qui se déplacent et changent d’état selon un modèle stochastique SVEIRD.", en: "Built for a 2D-cell programming assignment, HealthRadar simulates people moving and changing states according to a stochastic SVEIRD model." },
     work: { fr: ["Modèle à cellules avec états de susceptibilité, vaccination, exposition, infection et rétablissement.", "Interface JavaFX pour éditer la grille, les zones et les paramètres de simulation.", "Statistiques et courbes pour observer l’évolution du scénario ; exécution terminal également disponible."], en: ["Cell model with susceptible, vaccinated, exposed, infected and recovered states.", "JavaFX interface for editing the grid, zones and simulation parameters.", "Statistics and charts for observing scenario evolution; a terminal mode is also available."] },
-    outcomes: { fr: ["Une simulation interactive de bureau qui relie règles, environnement et actions de l’utilisateur.", "Une structure Java documentée avec lancement Maven et mode graphique ou terminal."], en: ["An interactive desktop simulation connecting rules, environment and user actions.", "A documented Java structure with Maven, graphical and terminal launch modes."] },
-    tech: ["Java 17", "JavaFX", "Maven", "Automates cellulaires"],
+    outcomes: { fr: ["Le moteur Java original accessible sur le web : grille Canvas, pas de simulation, paramètres et courbes des effectifs.", "Un scénario reproductible par graine, indépendant des autres visiteurs et repris après redémarrage du serveur."], en: ["The original Java engine on the web: Canvas grid, simulation steps, parameters and population charts.", "Seeded reproducible scenarios, independent visitors and resume after server restart."] },
+    tech: ["Java", "JavaFX", "Canvas", "Automates cellulaires"],
     codeUrl: "https://github.com/khayem487/Sim_cell",
-    demo: null,
+    demo: { url: "https://khayem-healthradar.vercel.app", label: { fr: "Lancer une simulation", en: "Run a simulation" }, kind: "live" },
     art: "project-art/healthradar.svg",
-    note: { fr: "Projet collectif, présenté via mon fork public. Cette simulation pédagogique n’est pas un outil de prévision épidémiologique.", en: "A team project presented through my public fork. This educational simulation is not an epidemiological forecasting tool." }
+    note: { fr: "Projet collectif, présenté via mon fork public, avec une adaptation web du moteur Java. Les scénarios sont fictifs : ce n’est pas un outil de prévision épidémiologique. L’import des sauvegardes de bureau reste réservé à JavaFX.", en: "A team project presented through my public fork, with a web adaptation of the Java engine. Scenarios are fictional, not epidemiological forecasts. Desktop save imports remain in JavaFX." }
   },
   {
     id: "crous-notifier",
@@ -224,18 +224,18 @@ export const projects = [
     category: "tools",
     featured: false,
     year: "",
-    status: "case-study",
+    status: "live",
     title: { fr: "OOP Game · Java", en: "OOP Game · Java" },
-    summary: { fr: "Construire un petit jeu par étapes pour mettre en pratique classes, joueurs et niveaux.", en: "Building a small game step by step to practise classes, players and levels." },
+    summary: { fr: "Trois mondes à explorer, des pièces à collecter et des pièges à éviter, avec le moteur Java du projet original.", en: "Three worlds to explore, coins to collect and traps to avoid, using the original project's Java engine." },
     role: { fr: "Exercice académique · programmation objet", en: "Academic exercise · object-oriented programming" },
-    context: { fr: "Un exercice de programmation objet qui progresse par mondes et niveaux. Le projet met l’accent sur le modèle Java et la structure du code plutôt que sur une interface graphique.", en: "An object-oriented programming exercise progressing through worlds and levels. It focuses on the Java model and code structure rather than a graphical interface." },
-    work: { fr: ["Modélisation des joueurs et des niveaux dans des classes distinctes.", "Programme principal pour exécuter et vérifier les étapes du projet.", "Documentation Javadoc et dépôt limité aux sources."], en: ["Modelling players and levels as separate classes.", "A main program for running and checking the project’s stages.", "Javadoc documentation and a source-only repository."] },
-    outcomes: { fr: ["Un petit socle Java pour pratiquer la séparation des responsabilités et l’évolution d’un modèle objet."], en: ["A small Java foundation for practising separation of responsibilities and the evolution of an object model."] },
-    tech: ["Java", "POO", "Javadoc"],
+    context: { fr: "Un exercice de programmation objet initialement en console, adapté au navigateur en conservant les classes Player et Level. L’interface transmet des commandes au serveur Java, qui calcule les déplacements et les règles.", en: "An object-oriented console exercise adapted to the browser while retaining Player and Level. The interface sends commands to the Java server, which computes movement and rules." },
+    work: { fr: ["Modélisation des joueurs et des niveaux dans des classes distinctes.", "Adaptateur HTTP Java : collisions, pièces, vies et passage entre trois cartes jouables.", "Interface responsive au clavier ou aux boutons tactiles, avec reprise de la partie dans le même navigateur."], en: ["Modelling players and levels as separate classes.", "Java HTTP adapter: collisions, coins, lives and progression through three playable maps.", "Responsive interface with keyboard or touch controls and saved progress in the same browser."] },
+    outcomes: { fr: ["Une aventure complète de 15 pièces et 150 points, avec victoire, défaite et redémarrage.", "Des visiteurs indépendants : chaque état est reconstitué par Java à partir d’un historique de commandes validé."], en: ["A complete adventure with 15 coins, 150 points, victory, defeat and restart.", "Independent visitors: Java reconstructs each state from a validated command history."] },
+    tech: ["Java", "POO", "HTTP", "JavaScript"],
     codeUrl: "https://github.com/khayem487/oop-game-java",
-    demo: null,
+    demo: { url: "https://khayem-oop-game.vercel.app", label: { fr: "Jouer dans le navigateur", en: "Play in the browser" }, kind: "live" },
     art: "project-art/oop-game.svg",
-    note: null
+    note: { fr: "Le moteur console reste disponible. L’adaptation web ajoute trois cartes et une interface ; le score et les règles sont calculés par le vrai code Java.", en: "The console engine remains available. The web adaptation adds three maps and an interface; the actual Java code calculates scores and rules." }
   }
 ];
 

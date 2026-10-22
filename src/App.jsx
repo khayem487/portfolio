@@ -232,7 +232,19 @@ const proofMedia = {
   },
   "car-rental": {
     src: "demo-previews/rental.png",
-    caption: { fr: "Interface de l’application Spring Boot de location.", en: "Interface of the Spring Boot rental application." },
+    caption: { fr: "Loc Auto V2 : catalogue public et vraie réservation Spring Boot, avec compte visiteur fictif isolé.", en: "Loc Auto V2: public catalogue and real Spring Boot booking with an isolated fictional visitor account." },
+  },
+  "smart-home": {
+    src: "demo-previews/smart-home.png",
+    caption: { fr: "Le frontend React et le backend Java du projet : pièces, objets, rôles et scénarios manuels fictifs.", en: "The project's React frontend and Java backend: rooms, devices, roles and fictional manual scenarios." },
+  },
+  "oop-game-java": {
+    src: "demo-previews/oop-game.png",
+    caption: { fr: "Le jeu navigateur utilise le moteur Java original pour les déplacements, pièces, pièges et vies.", en: "The browser game uses the original Java engine for movement, coins, traps and lives." },
+  },
+  "healthradar": {
+    src: "demo-previews/healthradar.png",
+    caption: { fr: "La grille et les courbes du navigateur affichent les résultats du moteur Java original, sur un scénario fictif.", en: "The browser grid and charts display results from the original Java engine on a fictional scenario." },
   },
   "onetech-tender-agent": {
     src: "project-media/tender-walkthrough.png",
