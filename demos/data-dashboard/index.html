@@ -3,48 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f7f6f2">
-  <meta name="description" content="Explorez une démonstration interactive du dashboard Data Achats de Khayem Ben Ghorbel, avec les données fictives du projet Python et Flask.">
-  <title>Dashboard Data Achats — démonstration</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="../../demo-theme.css">
-  <script src="../../demo-theme.js" defer></script>
-  <script src="./data.js" defer></script>
-  <script src="./app.js" defer></script>
+  <meta http-equiv="refresh" content="0;url=https://khayem-data-dashboard.vercel.app/">
+  <title>Dashboard Data Achats</title>
+  <script>location.replace('https://khayem-data-dashboard.vercel.app/');</script>
 </head>
-<body>
-  <a class="skip-link" href="#dashboard">Aller au tableau de bord</a>
-  <header class="topbar">
-    <a class="brand" href="../../" aria-label="Retour au portfolio de Khayem"><span class="brand-mark" aria-hidden="true">K.</span> <span>Khayem Ben Ghorbel<span class="brand-sub">Laboratoire de projets</span></span></a>
-    <nav aria-label="Navigation de la démonstration"><a href="../../#projects">← Portfolio</a><a href="https://github.com/khayem487/data-dashboard" target="_blank" rel="noopener noreferrer">Code source <span aria-hidden="true">↗</span></a></nav>
-  </header>
-  <main id="dashboard">
-    <h1 class="visually-hidden" id="page-title">Dashboard Data Achats</h1>
-    <section class="workspace" aria-labelledby="workspace-title">
-      <div class="workspace-heading"><div><p class="eyebrow">VUE D’ENSEMBLE</p><h2 id="workspace-title">Pilotage des achats</h2></div><span class="dataset-badge">200 commandes fictives · 2023–2024</span></div>
-      <form class="filters" id="filters" aria-label="Filtrer les données">
-        <label>Période<select name="year" id="year"><option value="">2023 + 2024</option><option value="2023">2023</option><option value="2024">2024</option></select></label>
-        <label>Catégorie<select name="category" id="category"><option value="">Toutes les catégories</option></select></label>
-        <label class="supplier-filter">Fournisseur<input id="supplier" name="supplier" type="search" placeholder="Ex. Fournisseur A" autocomplete="off" list="supplier-list"><datalist id="supplier-list"></datalist></label>
-        <button class="reset-button" type="reset"><span aria-hidden="true">↺</span> Réinitialiser</button>
-      </form>
-      <p class="filter-summary" id="filter-summary" role="status" aria-live="polite"></p>
-      <div class="kpi-grid" aria-label="Indicateurs clés">
-        <article class="kpi kpi-primary"><p>Achats validés</p><strong id="kpi-total">—</strong><span>Somme des commandes validées</span></article>
-        <article class="kpi"><p>Commandes validées</p><strong id="kpi-count">—</strong><span id="kpi-count-note">—</span></article>
-        <article class="kpi"><p>Fournisseurs</p><strong id="kpi-suppliers">—</strong><span>Présents dans la sélection</span></article>
-        <article class="kpi"><p>Taux de validation</p><strong id="kpi-rate">—</strong><span>En nombre de commandes</span></article>
-      </div>
-      <div class="chart-grid">
-        <article class="panel monthly-panel"><div class="panel-heading"><div><p class="eyebrow">DYNAMIQUE</p><h3>Évolution mensuelle</h3></div><span class="chart-legend"><i aria-hidden="true"></i> Achats validés</span></div><div id="monthly-chart" class="monthly-chart"></div><details><summary>Afficher les montants par mois</summary><div class="table-wrap"><table><caption>Achats validés par mois</caption><thead><tr><th scope="col">Mois</th><th scope="col">Montant</th></tr></thead><tbody id="monthly-table"></tbody></table></div></details></article>
-        <article class="panel category-panel"><div class="panel-heading"><div><p class="eyebrow">RÉPARTITION</p><h3>Les postes de dépenses</h3></div><span class="small-note">5 catégories</span></div><div id="category-chart" class="bar-list"></div><details><summary>Afficher le détail par catégorie</summary><div class="table-wrap"><table><caption>Achats validés par catégorie</caption><thead><tr><th scope="col">Catégorie</th><th scope="col">Montant</th><th scope="col">Part</th></tr></thead><tbody id="category-table"></tbody></table></div></details></article>
-        <article class="panel supplier-panel"><div class="panel-heading"><div><p class="eyebrow">PARTENAIRES</p><h3>Top 5 fournisseurs</h3></div><span class="small-note">Montants validés</span></div><div id="supplier-chart" class="bar-list supplier-bars"></div><details><summary>Afficher les 5 premiers fournisseurs</summary><div class="table-wrap"><table><caption>Top 5 fournisseurs selon les achats validés</caption><thead><tr><th scope="col">Fournisseur</th><th scope="col">Montant</th></tr></thead><tbody id="supplier-table"></tbody></table></div></details></article>
-        <article class="panel budget-panel"><div class="panel-heading"><div><p class="eyebrow">BUDGET DE SIMULATION</p><h3>Du budget au solde</h3></div><span class="small-note">Base fixe : 500 000 €</span></div><div id="budget-chart" class="budget-chart"></div><p id="budget-note" class="budget-note"></p><details><summary>Afficher la cascade budgétaire</summary><div class="table-wrap"><table><caption>Budget initial, dépenses par catégorie et solde</caption><thead><tr><th scope="col">Étape</th><th scope="col">Variation / total</th></tr></thead><tbody id="budget-table"></tbody></table></div></details></article>
-      </div>
-    </section>
-    <section class="methodology" id="methodologie" aria-labelledby="methodology-title"><p class="eyebrow">SOUS LE CAPOT</p><div><h2 id="methodology-title">Des chiffres vérifiables.<br>Une démo sans attente.</h2><p>Le CSV du dépôt contient <strong>200 commandes synthétiques</strong> et des fournisseurs fictifs A à J. Cette version publie uniquement leurs sommes et leurs effectifs regroupés. Les filtres recalculent les cinq vues dans votre navigateur.</p><p>Seules les commandes « Validé » alimentent les dépenses. Le nombre de fournisseurs et le taux de validation prennent en compte tous les statuts de la sélection. Le budget reste celui du projet d’origine : <strong>500 000 €</strong>, quelle que soit la période choisie.</p><a class="source-link" href="https://github.com/khayem487/data-dashboard/tree/9727ac26a6194d307c3710c915f14e1d5d008c20" target="_blank" rel="noopener noreferrer">Consulter la version source vérifiée <span aria-hidden="true">↗</span></a><a class="data-link" href="./data.json" download="data-achats-agregats.json">Télécharger les agrégats JSON ↓</a></div></section>
-  </main>
-  <footer><span>Conçu et développé par Khayem Ben Ghorbel.</span><a href="../../#projects">Retour aux projets <span aria-hidden="true">↗</span></a></footer>
-  <noscript><p class="noscript">Activez JavaScript pour explorer les filtres et graphiques. Les <a href="./data.json">agrégats et valeurs de référence</a> restent consultables au format JSON.</p></noscript>
-</body>
+<body><p><a href="https://khayem-data-dashboard.vercel.app/">Ouvrir le Dashboard Data Achats</a></p></body>
 </html>
