@@ -24,8 +24,10 @@
 | **Reconnaissance ASL** | [Webcam et prédiction](https://khayem-asl.vercel.app) | [Python / MediaPipe / scikit-learn](https://github.com/khayem487/asl-recognition) |
 | **Pointage facial** | [Inscription et pointage](https://khayem-facial-attendance.vercel.app) | [Python / Flask / OpenCV](https://github.com/khayem487/Facial-Recognition-Attendance) |
 | **Loc Auto** | [Catalogue et réservation](https://khayem-car-rental.vercel.app) | [Java / Spring Boot / Thymeleaf](https://github.com/khayem487/car-rental-client) |
+| **Dashboard Data Achats** | [Indicateurs et graphiques](https://khayem-data-dashboard.vercel.app) | [Python / Flask / Pandas](https://github.com/khayem487/data-dashboard) |
+| **Exchange Matcher** | [Préférences et matching](https://khayem-exchange-matcher.vercel.app) | [JavaScript / Gale-Shapley](https://github.com/basstreche9/exchange-matcher) |
 
-Les autres projets sont présentés dans leurs fiches avec le code disponible. Un projet sans application déployée ne propose pas de faux bouton de démonstration. Exchange Matcher est une participation au projet collectif dont le dépôt est maintenu par [basstreche9](https://github.com/basstreche9).
+Les autres projets sont présentés dans leurs fiches avec le code disponible. Un projet sans application déployée ne propose pas de faux bouton de démonstration. Exchange Matcher est un projet personnel initialement publié sous le pseudonyme [basstreche9](https://github.com/basstreche9), avec des candidats fictifs et sans connexion active à l’ENT.
 
 <details>
 <summary><strong>Aperçus des applications</strong></summary>
@@ -38,6 +40,12 @@ Les autres projets sont présentés dans leurs fiches avec le code disponible. U
 
 ### Location de voitures
 ![Application Loc Auto](public/demo-previews/rental.png)
+
+### Dashboard Data Achats
+![Vrai dashboard Flask et Pandas](public/demo-previews/dashboard.png)
+
+### Exchange Matcher
+![Application Exchange Matcher](public/demo-previews/exchange.png)
 
 Captures des interfaces des applications. Les illustrations SVG des autres cartes sont conceptuelles.
 
@@ -60,13 +68,16 @@ npm run build
 | `src/data/projects.js` | Contenus bilingues et liens vers les applications |
 | `src/App.jsx`, `src/styles.css` | Portfolio et fiches |
 | `public/demo-previews/` | Captures des applications hébergées |
-| `public/stage-demo/`, `public/demos/data-dashboard/` | Présentations pédagogiques autonomes, distinctes des applications |
+| `public/stage-demo/` | Parcours pédagogique du prototype de stage, clairement identifié |
+| `public/demos/data-dashboard/` | Ancienne URL redirigée vers le vrai backend Flask/Pandas |
 
 Le CV fourni est conservé sans modification : SHA-256 `864123f4d6e60d0084378d6c0d943f614699862401c1d8ab72415b039b39a631`.
 
 ## Publier
 
-Projet Vercel : **khayem-ben-ghorbel**. Après connexion au compte propriétaire :
+Projet Vercel : **khayem-ben-ghorbel**, relié à ce dépôt. Un push sur `master` déclenche le déploiement de production ; les autres branches produisent un aperçu. GitHub Pages est également construit par GitHub Actions.
+
+Pour une publication manuelle depuis le compte propriétaire :
 
 ```sh
 npx vercel link --project khayem-ben-ghorbel
@@ -79,7 +90,7 @@ npx vercel deploy --prebuilt --prod
 
 ## Vérifications
 
-20 octobre 2026 : compilation de production, intégrité du CV et liens directs des trois applications contrôlés. Les simulations ajoutées au portfolio ont été retirées. Les anciennes URLs internes de démo renvoient vers le vrai site pour les projets hébergés, et vers la fiche pour les autres projets.
+22 octobre 2026 : compilation de production, intégrité du CV et liens directs des cinq applications contrôlés. Dashboard Data utilise ses véritables API Flask/Pandas ; Exchange Matcher exécute le matching avec les seuls vœux sélectionnés dans le navigateur. Les anciennes URLs internes de démo renvoient vers le vrai site pour les projets hébergés, et vers la fiche pour les autres projets.
 
 ---
 

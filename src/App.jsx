@@ -242,11 +242,15 @@ const proofMedia = {
     },
   },
   "data-dashboard": {
-    src: "project-media/dashboard-browser.png",
+    src: "demo-previews/dashboard.png",
     caption: {
-      fr: "Capture de la démonstration interactive : dépenses, catégories et fournisseurs issus du jeu de données simulées du projet.",
-      en: "Screenshot of the interactive demo: spending, categories and suppliers from the project’s simulated dataset.",
+      fr: "L’application Flask/Pandas déployée : indicateurs et graphiques calculés à partir du CSV fictif du projet.",
+      en: "The deployed Flask/Pandas application: indicators and charts calculated from the project’s fictional CSV dataset.",
     },
+  },
+  "exchange-matcher": {
+    src: "demo-previews/exchange.png",
+    caption: { fr: "Le prototype original exécute le matching avec les vœux sélectionnés et des candidats fictifs.", en: "The original prototype runs the matching with selected preferences and fictional candidates." },
   },
 };
 
