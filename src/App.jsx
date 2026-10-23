@@ -240,7 +240,7 @@ const proofMedia = {
   },
   "oop-game-java": {
     src: "demo-previews/oop-game.png",
-    caption: { fr: "Le jeu navigateur utilise le moteur Java original pour les déplacements, pièces, pièges et vies.", en: "The browser game uses the original Java engine for movement, coins, traps and lives." },
+    caption: { fr: "La campagne de six cartes, ses sentinelles et son inventaire utilisent le même moteur Java que l’application JavaFX.", en: "The six-map campaign, its sentinels and inventory use the same Java engine as the JavaFX application." },
   },
   "healthradar": {
     src: "demo-previews/healthradar.png",
