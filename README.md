@@ -21,13 +21,13 @@
 
 | Application | Démo en ligne | Code |
 | --- | --- | --- |
-| **Reconnaissance ASL** | [Webcam et prédiction](https://khayem-asl.vercel.app) | [Python / MediaPipe / scikit-learn](https://github.com/khayem487/asl-recognition) |
-| **Pointage facial** | [Inscription et pointage](https://khayem-facial-attendance.vercel.app) | [Python / Flask / OpenCV](https://github.com/khayem487/Facial-Recognition-Attendance) |
+| **Reconnaissance ASL** | [Caméra guidée et prédiction du modèle](https://khayem-asl.vercel.app) | [Python / MediaPipe / scikit-learn](https://github.com/khayem487/asl-recognition) |
+| **Pointage facial** | [Espace privé, pointage et suppression](https://khayem-facial-attendance.vercel.app) | [Python / Flask / OpenCV / Blob privé](https://github.com/khayem487/Facial-Recognition-Attendance) |
 | **Loc Auto** | [Catalogue et réservation](https://khayem-car-rental.vercel.app) | [Java / Spring Boot / Thymeleaf](https://github.com/khayem487/car-rental-client) |
 | **Dashboard Data Achats** | [Indicateurs et graphiques](https://khayem-data-dashboard.vercel.app) | [Python / Flask / Pandas](https://github.com/khayem487/data-dashboard) |
 | **Exchange Matcher** | [Préférences et matching](https://khayem-exchange-matcher.vercel.app) | [JavaScript / Gale-Shapley](https://github.com/basstreche9/exchange-matcher) |
 | **Maison Intelligente** | [Pièces, objets et scénarios](https://khayem-smart-home.vercel.app) | [Java / Spring Boot / React](https://github.com/khayem487/Dev-Web-ING-1-S2-public) |
-| **OOP Game** | [Jouer aux trois mondes](https://khayem-oop-game.vercel.app) | [Moteur Java original / interface web](https://github.com/khayem487/oop-game-java) |
+| **OOP Game** | [Jouer la campagne de six cartes](https://khayem-oop-game.vercel.app) | [Moteur Java original / interface web](https://github.com/khayem487/oop-game-java) |
 | **HealthRadar** | [Grille et courbes de simulation](https://khayem-healthradar.vercel.app) | [Moteur Java original / Canvas](https://github.com/khayem487/Sim_cell) |
 
 Les autres projets sont présentés dans leurs fiches avec le code disponible. Un projet sans application déployée ne propose pas de faux bouton de démonstration. Exchange Matcher est un projet personnel initialement publié sous le pseudonyme [basstreche9](https://github.com/basstreche9), avec des candidats fictifs et sans connexion active à l’ENT.
@@ -60,6 +60,8 @@ Les autres projets sont présentés dans leurs fiches avec le code disponible. U
 ![Simulation et statistiques calculées par Java](public/demo-previews/healthradar.png)
 
 Captures des interfaces des applications. Les illustrations SVG des autres cartes sont conceptuelles.
+
+Les aperçus ASL et pointage facial ont été renouvelés le 30 octobre 2026 depuis les applications publiées. ASL utilise le vrai modèle, avec commandes caméra et guidage ; il classe des signes de l’alphabet sans traduire une conversation. Le pointage utilise OpenCV et Blob privé dans le cloud : chaque navigateur possède son espace, avec suppression des références et de l’historique. Cet espace n’est pas un compte utilisateur et le score de similarité ne garantit pas l’identité. Le mode local `face_recognition` reste distinct. Les captures montrent des espaces au repos, sans activer de webcam ni afficher de données personnelles.
 
 </details>
 

@@ -224,11 +224,11 @@ const readSetting = (key, fallback) => {
 const proofMedia = {
   "asl-recognition": {
     src: "demo-previews/asl.png",
-    caption: { fr: "Interface de l’application Flask de reconnaissance ASL.", en: "Interface of the Flask ASL recognition application." },
+    caption: { fr: "La démo ASL publiée : démarrage et arrêt de la caméra, prédiction du modèle et conseils de cadrage. Capture au repos, caméra éteinte.", en: "The deployed ASL demo: camera start/stop, model prediction and framing guidance. Captured at rest with the camera off." },
   },
   "facial-attendance": {
     src: "demo-previews/facial.png",
-    caption: { fr: "Interface de l’application Flask de pointage facial.", en: "Interface of the Flask facial attendance application." },
+    caption: { fr: "L’espace de pointage publié : profils propres au navigateur, références privées et accès à l’historique. Capture d’un espace vide, sans donnée personnelle.", en: "The deployed attendance workspace: browser-specific profiles, private references and access to history. Captured in an empty workspace without personal data." },
   },
   "car-rental": {
     src: "demo-previews/rental.png",
